@@ -31,9 +31,7 @@ var msrc = [
 var btn = $("#audio_btn");
 
 if (currentIndex == -1) {
-    audio.src = msrc[0];
-    btn.attr("title", mlist[0]);
-    currentIndex = 0;
+    _qie();
 }
 function Song() {
     if (audio.paused) {
@@ -45,7 +43,12 @@ function Song() {
 Song();
 var num = 0;
 audio.addEventListener('ended', function () {
+    _qie();
+    Song();
+}, false);
 
+
+function _qie(){
     with (currentIndex == num) {
         num = GetRandomNum(msrc.length);
     }
@@ -53,8 +56,9 @@ audio.addEventListener('ended', function () {
     num = currentIndex;
     audio.src = msrc[currentIndex];
     btn.attr("title", mlist[currentIndex]);
-    Song();
-}, false);
+}
+
+
 
 btn.click(function () {
     $(this).find("i").hasClass("fa-spin") ? $(this).find("i").removeClass("fa-spin") : $(this).find("i").addClass("fa-spin");
@@ -64,4 +68,3 @@ btn.click(function () {
 function GetRandomNum(num) {
     return parseInt(Math.random() * num);
 }
-

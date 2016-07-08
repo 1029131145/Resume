@@ -2,1140 +2,444 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="vali,vali.js,验证,表单验证,form验证,验证插件,验证控件,validate,validate.js,1029131145"/>
-    <meta name="description" content="一款强大简单自由的验证插件，作者：鲁康" />
-    <title>Vali Js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="鲁康,lukang,前端,工作,简历,鲁康的简历,鲁康简历">
+    <meta name="description" content="我是一个充满活力、对前端由衷热爱、善于发现问题的前端工程师。我目前正在寻找前端工程师岗位，希望借此机会为贵司献上我的一点绵薄之力，快招我到碗里来吧！">
+    <title>鲁康的简历</title>
+
     <link rel="icon" href="favicon.ico">
-    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/vali.min.js"></script>
-    <script type="text/javascript" src="js/vali.prompt.zh-cn.js"></script>
 
-    <link rel="stylesheet" href="css/vali.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.css">
-    <link rel="stylesheet" href="css/default.min.css">
-    <link rel="stylesheet" href="css/css.css">
+    <link type="text/css" rel="stylesheet" href="css/css.css"/>
 
+    <link type="text/css" rel="stylesheet" href="css/hover.css"/>
+
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/buttons.css"/>
+    <link type="text/css" rel="stylesheet" href="fontawesome/css/font-awesome.min.css"/>
+    <!--<link type="text/css" rel="stylesheet" href="css/style.css"/>-->
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>-->
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="tmtimeline/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="tmtimeline/css/component.css" />
+
+    <link rel="stylesheet" type="text/css" href="DialogEffects/css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="DialogEffects/css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="DialogEffects/css/dialog.css"/>
+    <link rel="stylesheet" type="text/css" href="DialogEffects/css/dialog-sandra.css"/>
+    <script src="DialogEffects/js/modernizr.custom.js"></script>
+
+
+    <!--<script src="tmtimeline/js/modernizr.custom.js"></script>-->
 
 </head>
-<body style="padding-top: 50px" data-spy="scroll" data-target="#navbar-example">
+<body>
+<canvas id="canvas" class="canvas hidden-xs" width="1000px" height="50px"></canvas>
+<div class="lk_body">
+    <div class="lk_float" id="float">
+        <div class="container ">
+            <div class="row text-right">
 
-<header  class="navbar navbar-static-top bs-docs-nav navbar-fixed-top" id="top" role="banner">
-    <div class="container">
-        <div class="navbar-header">
-            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar"
-                    aria-controls="bs-navbar" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand">Vali.js</a>
-        </div>
-        <nav id="bs-navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#content">起步</a>
-                </li>
-                <li>
-                    <a href="https://github.com/1029131145/vali/archive/master.zip">下载</a>
-                </li>
-                <li>
-                    <a href="https://github.com/1029131145/vali"><i class="fa fa-github-alt"></i> GitHub</a>
-                </li>
 
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="tencent://message/?uin=1029131145" target="_blank"><i class="fa fa-qq"></i> QQ联系我</a>
-                </li>
-                <li>
-                    <a href="mailto:1029131145@qq.com" target="_blank"><i class="fa fa-envelope"></i> 给我写邮件</a>
-                </li>
-                <li>
+                <a href="#" class="fl resume"><i class="fa fa-tag"></i> Resume 鲁康</a>
+
+                <div class="button-group">
+                    <button href="javascript:;" data-dialog="somedialog" class="button button-primary rwm_btn">
+                        <i class="fa fa-wechat"></i>
+                    </button>
+                    <a href="http://weibo.com/279537953" target="_blank"
+                       class="button button-primary hidden-xs">
+                        <i class="fa fa-weibo"></i>
+                    </a>
+                    <a href="https://github.com/1029131145" target="_blank"
+                       class="button button-primary hidden-xs">
+                        <i class="fa fa-github"></i>
+                    </a>
                     <audio id="audio" style="display: none"></audio>
-                    <a href="javascript:;" id="audio_btn" target="_blank"><i class="fa fa-spin fa-music"></i></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
+                    <a href="javascript:;" id="audio_btn" class="button button-primary">
+                        <i class="fa fa-music fa-spin"></i>
+                    </a>
 
-<script type="text/javascript" src="js/mp3.js"></script>
-
-<div class="bs-docs-header" id="content" tabindex="-1">
-    <div class="container ">
-        <h1 style="color:#0f0f0f">Action</h1>
-
-        <p style="color:#0f0f0f;opacity: 0.85">简要介绍 Vali.js，以及如何下载、使用，还有基本模版和案例，等等。</p>
-    </div>
-
-    <canvas id="canvas1"></canvas>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-9" role="main">
-            <div class="bs-docs-section">
-                <h1 id="download" class="page-header"> 下载
-                </h1>
-
-                <p class="lead">Vali.js （当前版本 v 1.3）提供快速验证表单的很强大的控件。希望大家能多多协助。</p>
-
-                <div class="row bs-downloads">
-                    <div class="col-sm-4">
-                        <p>
-                            <a href="https://github.com/1029131145/vali/archive/master.zip" class="btn btn-lg btn-outline">下载
-                                Vali.js</a>
-                        </p>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="bs-docs-section">
-                <h1 id="whats-included" class="page-header">包含的内容</h1>
-
-                <div class="bs-callout bs-callout-warning" id="jquery-required">
-                    <h4>Vali.js 插件全部依赖 jQuery</h4>
-
-                    <p>请注意，<strong>Vali.js 的所有 JavaScript 插件都依赖 jQuery，</strong>因此 jQuery 必须在 Vali.js 之前引入，就像在<a
-                            href="">基本模版</a>中所展示的一样。在<a
-                            href="https://github.com/1029131145/vali/blob/master/package.json">
-                        <code>package.json</code> 文件中</a>
-                        列出了 Vali.js 所支持的 jQuery 版本。</p>
                 </div>
             </div>
-            <div class="bs-docs-section">
-                <h1 id="anz" class="page-header">安装</h1>
-
-                <div class="highlight">
-
-                    <pre><code class="language-html" data-lang="html"><span class="c">&lt;!--  vali.js 核心 CSS 文件 主要是错误和正确的样式框 --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/vali.css"</span><span class="nt">&gt;</span>
-
-<span class="c">&lt;!-- jQuery文件。务必在vali.js 之前引入 --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"</span><span
-                                class="nt">&gt;&lt;/script&gt;</span>
-
-<span class="c">&lt;!-- vali.js 核心 JavaScript 文件 --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span
-                                class="s">"js/vali.min.js"</span><span
-                                class="nt">&gt;&lt;/script&gt;</span></code></pre>
-                </div>
-            </div>
-            <div class="bs-docs-section">
-                <h1 id="shux" class="page-header">属性 </h1>
-
-                <table class="table table-hover table-bordered">
-                    <tr>
-                        <th class="info">属性名</th>
-                        <th>默认值</th>
-                        <th>类型</th>
-                        <th>描述</th>
-                    </tr>
-                    <tr>
-                        <th class="info">vali</th>
-                        <td>vali</td>
-                        <td>String</td>
-                        <td>表单的验证标识符</td>
-                    </tr>
-                    <tr>
-                        <th class="info">class_error</th>
-                        <td>vali_error</td>
-                        <td>String</td>
-                        <td>验证失败的输入框样式</td>
-                    </tr>
-                    <tr>
-                        <th class="info">class_success</th>
-                        <td>vali_success</td>
-                        <td>String</td>
-                        <td>验证成功的输入框样式</td>
-                    </tr>
-                    <tr>
-                        <th class="info">disparityH</th>
-                        <td>4</td>
-                        <td>Number</td>
-                        <td>提示框的Y轴误差</td>
-                    </tr>
-                    <tr>
-                        <th class="info">disparityW</th>
-                        <td>0</td>
-                        <td>Number</td>
-                        <td>提示框的X轴误差</td>
-                    </tr>
-                    <tr>
-                        <th class="info">prompt_width</th>
-                        <td>true</td>
-                        <td>Boolean</td>
-                        <td>提示框的宽度是否和输入框一样长</td>
-                    </tr>
-                    <tr>
-                        <th class="info">prompt_log</th>
-                        <td>false</td>
-                        <td>Boolean</td>
-                        <td>控制台步骤输出</td>
-                    </tr>
-                    <tr>
-                        <th class="info">success_show</th>
-                        <td>false</td>
-                        <td>Boolean</td>
-                        <td>验证成功提示框是否显示</td>
-                    </tr>
-                    <tr>
-                        <th class="info">icon_show</th>
-                        <td>true</td>
-                        <td>Boolean</td>
-                        <td>是否显示小图标</td>
-                    </tr>
-                    <tr>
-                        <th class="info">icon_img</th>
-                        <td>false</td>
-                        <td>Boolean</td>
-                        <td>是否把字体图标替换成图片图标</td>
-                    </tr>
-                    <tr>
-                        <th class="info">icon_img_eu</th>
-                        <td>""</td>
-                        <td>String</td>
-                        <td>验证失败的图片图标的URL路径</td>
-                    </tr>
-                    <tr>
-                        <th class="info">icon_img_su</th>
-                        <td>""</td>
-                        <td>String</td>
-                        <td>验证成功的图片图标的URL路径</td>
-                    </tr>
-                    <tr>
-                        <th class="info">decimal_places</th>
-                        <td>2</td>
-                        <td>Number</td>
-                        <td>验证货币类型的小数点位数</td>
-                    </tr>
-                    <tr>
-                        <th class="info">custom</th>
-                        <td>null</td>
-                        <td>数组</td>
-                        <td>自定义验证方法，很灵活</td>
-                    </tr>
-
-                    <tr>
-                        <th class="info">window_show</th>
-                        <td>true</td>
-                        <td>Boolean</td>
-                        <td>是否显示浮动窗口提示</td>
-                    </tr>
-
-                    <tr>
-                        <th class="info">pe <span class="label label-danger">v 1.3</span></th>
-                        <td>false</td>
-                        <td>Boolean</td>
-                        <td>通过用户code提示失败</td>
-                    </tr>
-                    <tr>
-                        <th class="info">ps <span class="label label-danger">v 1.3</span></th>
-                        <td>false</td>
-                        <td>Boolean</td>
-                        <td>通过用户code提示成功</td>
-                    </tr>
-
-
-
-                </table>
-
-            </div>
-
-            <div class="bs-docs-section">
-                <h1 id="yanz" class="page-header">22种验证</h1>
-
-
-                <table class="table table-hover table-bordered">
-                    <tr>
-                        <th class="info">验证标识</th>
-                        <th>设置值</th>
-                        <th>描述</th>
-                    </tr>
-                    <tr>
-                        <th class="info">email</th>
-                        <td>t</td>
-                        <td>验证邮箱</td>
-                    </tr>
-                    <tr>
-                        <th class="info">phone</th>
-                        <td>t</td>
-                        <td>验证手机号</td>
-                    </tr>
-                    <tr>
-                        <th class="info">max</th>
-                        <td>16</td>
-                        <td>长度不能大于设置值</td>
-                    </tr>
-                    <tr>
-                        <th class="info">min</th>
-                        <td>6</td>
-                        <td>长度不能小于设置值</td>
-                    </tr>
-                    <tr>
-                        <th class="info">bank <span class="label label-danger">v 1.1</span></th>
-                        <td>t</td>
-                        <td>
-                            验证银行卡号 <br>
-                            <span class="label label-danger">必须是真实的银行卡</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">only</th>
-                        <td>0,1,2,3,_</td>
-                        <td>
-                            只能用设置值类型组成 <br>
-                            <span class="label label-danger">0 = 汉字</span>
-                            <span class="label label-danger">1 = 字母</span>
-                            <span class="label label-danger">2 = 数字</span>
-                            <span class="label label-danger">3 = 空字符</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">must</th>
-                        <td>0,1,2,3,_</td>
-                        <td>必须用设置值类型组成 <br>
-                            <span class="label label-danger">同 only</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">first_must</th>
-                        <td>1</td>
-                        <td>首位必须是设置值类型 <br>
-                            <span class="label label-danger">0 = 汉字</span>
-                            <span class="label label-danger">1 = 字母</span>
-                            <span class="label label-danger">2 = 数字</span>
-                            <span class="label label-danger">3 = 空字符</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">first_cannot</th>
-                        <td>1</td>
-                        <td>首位不能是设置值类型 <br>
-                            <span class="label label-danger">同 first_must</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">number</th>
-                        <td>t</td>
-                        <td>验证货币类型 <br>自动转化成货币类型 <br>保留2位小数 <br>
-                        小数位可以通过属性 <span class="label label-danger">decimal_places</span> 设置
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">idcard <span class="label label-danger">v 1.1</span></th>
-                        <td>t</td>
-                        <td>
-                            验证身份证
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">equally</th>
-                        <td>id,class</td>
-                        <td>
-                            值必须一致 <br>
-                            <span class="label label-danger">如果多元素则取第一个元素的值进行验证</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">date</th>
-                        <td>t</td>
-                        <td>
-                            验证日期格式 <br>
-                            <span class="label label-danger">例如：1996-05-21 = ture | 1996-02-30 = false</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">time <span class="label label-danger">v 1.3</span></th>
-                        <td>t</td>
-                        <td>
-                            验证时间格式 <br>
-                            <span class="label label-danger">例如：12:02:02 = ture | 30:30:600 = false</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">datetime <span class="label label-danger">v 1.3</span></th>
-                        <td>t</td>
-                        <td>
-                            验证时间格式 <br>
-                            <span class="label label-danger">例如：2016-02-15 14:17:04</span>
-                        </td>
-                    </tr>
-
-
-                    <tr>
-                        <th class="info">cannot</th>
-                        <td>on</td>
-                        <td>
-                            选择值不能是设置值 <br>
-                            <span class="label label-danger">此验证针对于 select</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">custom</th>
-                        <td>t</td>
-                        <td>
-                            自定义验证方法 <br>
-                            <span class="label label-danger">涉及很多，请看案例</span>
-                        </td>
-                    </tr>
-
-
-                    <tr>
-                        <th class="info">minmax <span class="label label-danger">v 1.3</span></th>
-                        <td>6-16 <span class="label label-danger">OR</span> 6,16</td>
-                        <td>
-                            长度区间
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">http <span class="label label-danger">v 1.3</span></th>
-                        <td>t</td>
-                        <td>
-                            验证网址
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th class="info">number_max <span class="label label-danger">v 1.3</span></th>
-                        <td>50</td>
-                        <td>
-                            数字不能大于设置值
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th class="info">number_min <span class="label label-danger">v 1.3</span></th>
-                        <td>10</td>
-                        <td>
-                            数字不能小于设置值
-                        </td>
-                    </tr>
-                    <tr>
-                        <th class="info">number_minmax <span class="label label-danger">v 1.3</span></th>
-                        <td>10-50 <span class="label label-danger">OR</span> 10,50</td>
-                        <td>
-                            数字大小区间
-                        </td>
-                    </tr>
-
-
-                </table>
-
-            </div>
-
-
-            <div class="bs-docs-section anli">
-                <h1 id="duix" class="page-header">vali对象</h1>
-                <div class="bs-callout bs-callout-danger" >
-                    <h4>$.vali对象</h4>
-                    <p><strong>vali 方法返回一个 vali 对象。vali 对象有很多方法可以用来引发校验程序或者改变 form 的内容，下面列出几个常用的方法。</strong></p>
-                </div>
-                <table class="table table-hover table-bordered">
-                    <tr>
-                        <th class="info">方法名</th>
-                        <th>返回类型</th>
-                        <th>描述</th>
-                    </tr>
-                    <tr>
-                        <td class="info">setPrompt(a)</td>
-                        <td>无返回</td>
-                        <td>设置提示语</td>
-                    </tr>
-                    <tr>
-                        <td class="info">form(a, b)</td>
-                        <td>Boolean</td>
-                        <td>验证 form 返回成功还是失败</td>
-                    </tr>
-                    <tr>
-                        <td class="info">ele(a)</td>
-                        <td>Boolean</td>
-                        <td>验证单个元素是成功还是失败。</td>
-                    </tr>
-                    <tr>
-                        <td class="info">promptHide(a)</td>
-                        <td>无返回</td>
-                        <td>隐藏所有提示</td>
-                    </tr>
-
-
-                </table>
-            </div>
-
-
-            <div class="bs-docs-section">
-                <h1 id="tis" class="page-header">自定义提示框</h1>
-
-
-
-                <pre class="hl"><code class="language-html" data-lang="html"><span class="hl kwa">&lt;script type=&quot;text/javascript&quot;&gt;</span>
-    <span class="hl opt">$.</span>vali<span class="hl opt">.</span><span class="hl kwd">setPrompt</span><span class="hl opt">({</span>
-        <span class="hl str">&quot;Success&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Success&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;email&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Please enter the correct email address&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;phone&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Please enter the correct cell phone number&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;max&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Can not exceed ｛0｝ characters&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;min&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Not less than ｛0｝ characters&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;bank&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Please enter the correct bank card number&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;only&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Contain only&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;must&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Must contain&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;first_must&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;The first must be：&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;first_cannot&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;The first cannot be：&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;number&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Please enter a number&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;idcard&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Please enter the correct ID number&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;equally&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Must be the same&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;cannot&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;cannot is ｛0｝&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;date&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Please enter the correct date&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;http&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Please enter the correct URL&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;number_max&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Can not be greater than ｛0｝&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;number_min&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Can not be less than ｛0｝&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;time&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Please enter the correct time&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;datetime&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Please enter the correct date time&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;value0&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Chinese&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;value1&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Letter&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;value2&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Number&quot;</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;value3&quot;</span><span class="hl opt">:</span> <span class="hl str">&quot;Space&quot;</span>
-    <span class="hl opt">});</span>
-<span class="hl kwa">&lt;/script&gt;</span></code>
-</pre>
-
-
-
-
-                <div class="bs-callout bs-callout-info" id="jquery-">
-                    <h4>自定义提示框一定要在 Vali.js 之后引入</h4>
-
-                    <p>请注意：<strong>不可更改验证属性名</strong>，｛0｝是替换符号</p>
-
-                </div>
-
-            </div>
-            <div class="bs-docs-section anli">
-                <h1 id="anli" class="page-header">验证案例</h1>
-                <div class="bs-callout bs-callout-danger" >
-                    <h4>包含14种验证案例</h4>
-                    <p><strong>请注意，这行字，其实没有什么特殊的，哈哈。</strong></p>
-                </div>
-                <h2 id="yan1">
-                    邮箱验证
-                </h2>
-
-                <form class="bs-example bs-example-form" id="form1" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1">请输入邮箱</span>
-                        <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1" email="t" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                    $("#form1").vali();
-                </script>
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;form</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;form&quot;</span><span class="hl kwa">&gt;</span>
-    <span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">email</span>=<span class="hl str">&quot;t&quot;</span> vali<span class="hl kwa">&gt;</span>
-<span class="hl kwa">&lt;/form&gt;</span>
-<span class="hl kwa">&lt;script type=&quot;text/javascript&quot;&gt;</span>
-    <span class="hl opt">$(</span><span class="hl str">&quot;.form&quot;</span><span class="hl opt">).</span><span class="hl kwd">vali</span><span class="hl opt">();</span>
-<span class="hl kwa">&lt;/script&gt;</span></code></pre>
-                <div class="alert alert-success" role="alert">
-                    邮箱验证，就是这么简单~
-                </div>
-
-                <h2 id="yan2">
-                    手机号验证
-                </h2>
-
-                <form class="bs-example bs-example-form" id="form2" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" id="">请输入手机号</span>
-                        <input type="text" class="form-control" placeholder="phone" aria-describedby="" phone="t" bl="152,136" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                    $("#form2").vali();
-                </script>
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;form</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;form&quot;</span><span class="hl kwa">&gt;</span>
-    <span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">bl</span>=<span class="hl str">&quot;152,136&quot;</span> <span class="hl kwb">phone</span>=<span class="hl str">&quot;t&quot;</span> vali<span class="hl kwa">&gt;</span>
-<span class="hl kwa">&lt;/form&gt;</span>
-<span class="hl kwa">&lt;script type=&quot;text/javascript&quot;&gt;</span>
-    <span class="hl opt">$(</span><span class="hl str">&quot;.form&quot;</span><span class="hl opt">).</span><span class="hl kwd">vali</span><span class="hl opt">();</span>
-<span class="hl kwa">&lt;/script&gt;</span></code></pre>
-                <div class="alert alert-info" role="alert">
-                    现在已经支持 170 <span class="label label-danger">v 1.1</span><br />
-                    增加黑名单，元素属性bl, bl="152,136",152和136开头不通过 <span class="label label-danger">v 1.3</span>
-                  
-                </div>
-
-                <h2 id="yan3">
-                    Max验证
-                </h2>
-                <form class="bs-example bs-example-form " id="form3" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >不能超过2个字符</span>
-                        <input type="text" class="form-control" placeholder="phone" aria-describedby="" value="已经超过2个了" max="2" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form3").vali();
-                </script>
-
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;form</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;form&quot;</span><span class="hl kwa">&gt;</span>
-    <span class="hl com">&lt;!-- max=5 则上限为5 --&gt;</span>
-    <span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">max</span>=<span class="hl str">&quot;2&quot;</span> vali<span class="hl kwa">&gt;</span>
-<span class="hl kwa">&lt;/form&gt;</span>
-<span class="hl kwa">&lt;script type=&quot;text/javascript&quot;&gt;</span>
-     <span class="hl opt">$(</span><span class="hl str">&quot;.form&quot;</span><span class="hl opt">).</span><span class="hl kwd">vali</span><span class="hl opt">();</span>
-<span class="hl kwa">&lt;/script&gt;</span></code></pre>
-                <div class="alert alert-info" role="alert">
-                    此验证跟min更配哟~<br />
-                    minmax="6-16" 长度区间 <span class="label label-danger">v 1.3</span> <br />
-                    或者 minmax="6,16"
-                </div>
-                <h2 id="yan4">
-                    Min验证
-                </h2>
-                <form class="bs-example bs-example-form " id="form4" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >必须超过2个字符</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="" value="" min="2" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form4").vali();
-                </script>
-
-                <pre><code class="language-html" data-lang="html">&lt;!<span class="hl slc">-- 用法同 Max --&gt;</span></code></pre>
-
-                <h2 id="yan5">
-                    银行卡验证
-                </h2>
-                <form class="bs-example bs-example-form " id="form5" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >银行卡</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="" value="" bank="y" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form5").vali();
-                </script>
-
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">bank</span>=<span class="hl str">&quot;t&quot;</span> vali<span class="hl kwa">&gt;</span></code></pre>
-
-
-                <div class="alert alert-danger" role="alert">
-                    银行卡必须是真实的 <span class="label label-danger">v 1.1</span>
-                </div>
-
-                <h2 id="yan6">
-                    only验证
-                </h2>
-                <form class="bs-example bs-example-form " id="form6" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >只能用字母数字下划线组成</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="" value="" only="1,2,_" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form6").vali();
-                </script>
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">only</span>=<span class="hl str">&quot;1,2,_&quot;</span> vali<span class="hl kwa">&gt;</span></code></pre>
-                <div class="alert alert-danger" role="alert">
-                    注意：此处 1 代表字母 2 代表数字 _ 就代表本身 <br>
-                    如果想加汉字 则是 0,1,2,_ <br>
-                    空格字符是 3
-                    其他特定则就是本身 比如 _ ， 如果想加 # 则是 1,2,_,# 用逗号隔开
-                </div>
-
-                <h2 id="yan7">must验证</h2>
-
-                <form class="bs-example bs-example-form " id="form7" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >必须用字母数字下划线组成</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="" value="" must="1,2,_" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form7").vali();
-                </script>
-
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">must</span>=<span class="hl str">&quot;1,2,_&quot;</span> vali<span class="hl kwa">&gt;</span></code></pre>
-                <div class="alert alert-danger" role="alert">
-                    同 only验证。
-                </div>
-
-                <h2 id="yan8">first_must验证</h2>
-                <form class="bs-example bs-example-form " id="form8" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >首位必须是字母</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="" value="" first_must="1" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form8").vali();
-                </script>
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">first_must</span>=<span class="hl str">&quot;1&quot;</span> vali<span class="hl kwa">&gt;</span></code></pre>
-
-                <div class="alert alert-danger" role="alert">
-                    注意：此处 1 代表字母 2 代表数字 _ 就代表本身 <br>
-                    如果验证汉字 则是 0 ， 空格字符是 3 <br>
-                    其他特定则就是本身 比如 首位必须是 _ 则 直接 first_must="_"
-                </div>
-
-                <h2 id="yan9">first_cannot验证</h2>
-                <form class="bs-example bs-example-form " id="form9" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >首位不能是字母</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="" value="" first_cannot="1" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form9").vali();
-                </script>
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">first_cannot</span>=<span class="hl str">&quot;1&quot;</span> vali<span class="hl kwa">&gt;</span></code></pre>
-                <div class="alert alert-danger" role="alert">
-                    同 first_must验证
-                </div>
-
-                <h2 id="yan10">货币验证</h2>
-                <form class="bs-example bs-example-form " id="form10" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >请输入钱</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="" value="" number="t" dp="3" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form10").vali();
-                </script>
-
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">number</span>=<span class="hl str">&quot;t&quot;</span>  <span class="hl kwb">dp</span>=<span class="hl str">&quot;3&quot;</span> vali<span class="hl kwa">&gt;</span></code></pre>
-                <div class="alert alert-danger" role="alert">
-                    可以通过元素属性 dp 来快捷设置位数 <span class="label label-danger">v 1.1</span> <br>
-                    小数点位数请设置属性 <span class="label label-danger">decimal_places</span> <br />
-                    元素属性 number_min 最小 <br />
-                    元素属性 number_max 最大 <br />
-                    元素属性 number_minmax 数值区间 <br />
-                </div>
-
-
-                <h2 id="yan11">身份证验证</h2>
-                <form class="bs-example bs-example-form " id="form11" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >请输入身份证</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="" value="" idcard="t" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form11").vali();
-                </script>
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">idcard</span>=<span class="hl str">&quot;t&quot;</span> vali<span class="hl kwa">&gt;</span></code></pre>
-                <div class="alert alert-danger" role="alert">
-                    身份证必须是真实的 <span class="label label-danger">v 1.1</span>
-                </div>
-
-                <h2 id="yan12">equally验证</h2>
-                <form class="bs-example bs-example-form" id="form12" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >值必须和我一样</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="" id="ces" value="1029131145"disabled="disabled">
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon" >必须跟上面一样</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="" value="" equally="#ces" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form12").vali();
-                </script>
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">id</span>=<span class="hl str">&quot;qq&quot;</span> <span class="hl kwb">value</span>=<span class="hl str">&quot;1029131145&quot;</span><span class="hl kwa">&gt;</span>
-<span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">equally</span>=<span class="hl str">&quot;#qq&quot;</span> vali<span class="hl kwa">&gt;</span></code></pre>
-                <div class="alert alert-danger" role="alert">
-                    如果没有ID，则写 equally=".class" .如果多元素则取第一个元素的值
-                </div>
-
-                <h2 id="yan13">日期验证</h2>
-                <form class="bs-example bs-example-form " id="form13" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >请输入日期</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="" value="" date="t" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form13").vali();
-                </script>
-                <pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">date</span>=<span class="hl str">&quot;t&quot;</span> vali<span class="hl kwa">&gt;</span></code></pre>
-                <div class="alert alert-danger" role="alert">
-                    日期格式：1996-09-24 or 1996-9-24 or 1996/5/21
-                    <br>
-                    错误格式：1996-2-30 <br />
-                    time="t" 验证时间 10:10:10 <br />
-                    datetime="t" 验证日期时间 1996-09-24 10:10:10 <span class="label label-danger">v 1.3</span>
-                    
-                </div>
-
-
-                <h2 id="yan14">cannot验证</h2>
-                <form class="bs-example bs-example-form " id="form14" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon" >不能选择第一个</span>
-                        <select class="form-control"  aria-describedby="" cannot="no" vali>
-                            <option value="no">--请选择--</option>
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                        </select>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                        $("#form14").vali();
-                </script>
-<pre><code class="language-html" data-lang="html"><span class="hl kwa">&lt;select</span> <span class="hl kwb">cannot</span>=<span class="hl str">&quot;no&quot;</span> vali<span class="hl kwa">&gt;</span>
-    <span class="hl kwa">&lt;option</span> <span class="hl kwb">value</span>=<span class="hl str">&quot;no&quot;</span><span class="hl kwa">&gt;</span>--请选择--<span class="hl kwa">&lt;/option&gt;</span>
-    <span class="hl kwa">&lt;option</span> <span class="hl kwb">value</span>=<span class="hl str">&quot;A&quot;</span><span class="hl kwa">&gt;</span>A<span class="hl kwa">&lt;/option&gt;</span>
-    <span class="hl kwa">&lt;option</span> <span class="hl kwb">value</span>=<span class="hl str">&quot;B&quot;</span><span class="hl kwa">&gt;</span>B<span class="hl kwa">&lt;/option&gt;</span>
-    <span class="hl kwa">&lt;option</span> <span class="hl kwb">value</span>=<span class="hl str">&quot;C&quot;</span><span class="hl kwa">&gt;</span>C<span class="hl kwa">&lt;/option&gt;</span>
-<span class="hl kwa">&lt;/select&gt;</span></code></pre>
-                <div class="alert alert-danger" role="alert">
-                    此验证主要针对于 select 当然 input 也可用！
-                </div>
-
-            </div>
-
-            <div class="bs-docs-section anli">
-                <h1 id="zdy" class="page-header">Custom自定义验证案例</h1>
-                <form class="bs-example bs-example-form " id="form15" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon">大于50 且是奇数</span>
-                        <input type="text" class="form-control" placeholder="..." aria-describedby="basic-addon1" custom="t" ele="custom" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                    $("#form15").vali({
-                        "custom":[{
-                            "ele":"custom",
-                            "fun":function (e){
-                                var v= parseInt(e.val());
-                                if(isNaN(v)||v<=50){
-                                    return false;
-                                }
-                                if(v % 2==0){
-                                    return false;
-                                }
-                                return true;
-                            },
-                            "err":"必须大于50 且是奇数"
-                        }]
-                    });
-                </script>
-
-
-<pre class="hl"><code class="language-html" data-lang="html"><span class="hl kwa">&lt;form</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;form&quot;</span><span class="hl kwa">&gt;</span>
-    <span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">custom</span>=<span class="hl str">&quot;t&quot;</span> <span class="hl kwb">ele</span>=<span class="hl str">&quot;custom&quot;</span> vali<span class="hl kwa">&gt;</span>
-<span class="hl kwa">&lt;/form&gt;</span>
-<span class="hl kwa">&lt;script type=&quot;text/javascript&quot;&gt;</span>
-    <span class="hl opt">$(</span><span class="hl str">&quot;.form&quot;</span><span class="hl opt">).</span><span class="hl kwd">vali</span><span class="hl opt">({</span>
-        <span class="hl str">&quot;custom&quot;</span><span class="hl opt">:[{</span>
-            <span class="hl str">&quot;ele&quot;</span><span class="hl opt">:</span><span class="hl str">&quot;custom&quot;</span><span class="hl opt">,</span>
-            <span class="hl str">&quot;fun&quot;</span><span class="hl opt">:</span><span class="hl kwa">function</span> <span class="hl opt">(</span>e<span class="hl opt">){</span>
-                <span class="hl kwa">var</span> v<span class="hl opt">=</span> <span class="hl kwd">parseInt</span><span class="hl opt">(</span>e<span class="hl opt">.</span><span class="hl kwd">val</span><span class="hl opt">());</span>
-                <span class="hl kwa">if</span><span class="hl opt">(</span><span class="hl kwd">isNaN</span><span class="hl opt">(</span>v<span class="hl opt">)||</span>v<span class="hl opt">&lt;=</span><span class="hl num">50</span><span class="hl opt">){</span>
-                    <span class="hl kwa">return false</span><span class="hl opt">;</span>
-                <span class="hl opt">}</span>
-                <span class="hl kwa">if</span><span class="hl opt">(</span>v <span class="hl opt">%</span> <span class="hl num">2</span><span class="hl opt">==</span><span class="hl num">0</span><span class="hl opt">){</span>
-                    <span class="hl kwa">return false</span><span class="hl opt">;</span>
-                <span class="hl opt">}</span>
-                <span class="hl kwa">return true</span><span class="hl opt">;</span>
-            <span class="hl opt">},</span>
-            <span class="hl str">&quot;err&quot;</span><span class="hl opt">:</span><span class="hl str">&quot;必须大于50 且是奇数&quot;</span>
-        <span class="hl opt">}]</span>
-    <span class="hl opt">});</span>
-<span class="hl kwa">&lt;/script&gt;</span></code></pre>
-
-                <div class="alert alert-danger" role="alert">
-                    元素属性 ele 和自定义ele必须一致 多个自定义 ele不能重复<br>
-                    fun 必须返回 true or false 且 必须带参数 e ，e 代表 input本身<br>
-                    err 是错误提示语
-                </div>
-
-
-
-
-            </div>
-
-            <div class="bs-docs-section anli">
-                <h1 id="ts_zdy" class="page-header">提示框自定义 <small style="color:red;">v1.3</small></h1>
-                <form class="bs-example bs-example-form " id="form16" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon">请输入邮箱</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon1" email="t" pe="#pe" ps="#ps" vali>
-                    </div>
-                    <span class="label label-danger" id="pe" style="display:none">输入错误</span>
-                    <span class="label label-info" id="ps" style="display:none">输入正确</span>
-                </form>
-                <script type="text/javascript">
-                    $("#form16").vali({
-                        "window_show":false,
-                        "pe":true,
-                        "ps":true
-                    });
-                </script>
-
-                <pre class="hl"><code class="language-html"><span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">email</span>=<span class="hl str">&quot;t&quot;</span> <span class="hl kwb">pe</span>=<span class="hl str">&quot;#pe&quot;</span> <span class="hl kwb">ps</span>=<span class="hl str">&quot;#ps&quot;</span> vali<span class="hl kwa">&gt;</span>
-<span class="hl kwa">&lt;span</span> <span class="hl kwb">id</span>=<span class="hl str">&quot;pe&quot;</span> <span class="hl kwb">style</span>=<span class="hl str">&quot;display:none&quot;</span><span class="hl kwa">&gt;</span>输入错误<span class="hl kwa">&lt;/span&gt;</span>
-<span class="hl kwa">&lt;span</span> <span class="hl kwb">id</span>=<span class="hl str">&quot;ps&quot;</span> <span class="hl kwb">style</span>=<span class="hl str">&quot;display:none&quot;</span><span class="hl kwa">&gt;</span>输入正确<span class="hl kwa">&lt;/span&gt;</span>
-<span class="hl kwa">&lt;script type=&quot;text/javascript&quot;&gt;</span>
-    <span class="hl opt">$(</span><span class="hl str">&quot;.form&quot;</span><span class="hl opt">).</span><span class="hl kwd">vali</span><span class="hl opt">({</span>
-        <span class="hl str">&quot;window_show&quot;</span><span class="hl opt">:</span><span class="hl kwa">false</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;pe&quot;</span><span class="hl opt">:</span><span class="hl kwa">true</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;ps&quot;</span><span class="hl opt">:</span><span class="hl kwa">true</span>
-    <span class="hl opt">});</span>
-<span class="hl kwa">&lt;/script&gt;</span></code>
-</pre>
-                <div class="alert alert-danger" role="alert">
-                    pe 失败提示，ps 成功提示，可以用class。
-                </div>
-            </div>
-
-            <div class="bs-docs-section anli">
-                <h1 id="cg" class="page-header">显示成功提示框</h1>
-                <form class="bs-example bs-example-form " id="form17" data-example-id="simple-input-groups">
-                    <div class="input-group">
-                        <span class="input-group-addon">请输入邮箱</span>
-                        <input type="text" class="form-control" placeholder="输入正确才能看到哟" aria-describedby="basic-addon1" email="t" vali>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                    $("#form17").vali({
-                        "success_show":true
-                    });
-                </script>
-
-<pre class="hl"><code class="language-html" data-lang="html"><span class="hl kwa">&lt;script type=&quot;text/javascript&quot;&gt;</span>
-     <span class="hl opt">$(</span><span class="hl str">&quot;.form&quot;</span><span class="hl opt">).</span><span class="hl kwd">vali</span><span class="hl opt">({</span>
-           <span class="hl str">&quot;success_show&quot;</span><span class="hl opt">:</span><span class="hl kwa">true</span>
-     <span class="hl opt">});</span>
-<span class="hl kwa">&lt;/script&gt;</span></code></pre>
-
-            </div>
-
-            <div class="bs-docs-section anli">
-                <h1 id="zc" class="page-header">完整注册案例</h1>
-
-            <form class="bs-example bs-example-form" method="get" action="index.html" id="form" data-example-id="simple-input-groups">
-                <h3 class="text-center">注 册</h3>
-                <div class="zhuce">
-                    <label class="tit">邮箱<span class="fr s1">邮箱格式不对</span></label>
-                    <input type="text" class="input" pe=".zhuce .s1"  email="t" vali>
-
-                    <label class="tit">用户名<span class="fr s2">用户名必须在6-16位</span></label>
-                    <input type="text" class="input"  minmax="6,16" pe=".zhuce .s2" vali>
-
-                    <label class="tit">密码<span class="fr s3">密码必须在6-16位,且必须用字母和数字组成</span></label>
-                    <input type="password" class="input" id="pwd" pe=".zhuce .s3" minmax="6,16" must="1,2" vali>
-
-                    <label class="tit">确认密码<span class="fr s4">必须和密码一致</span></label>
-                    <input type="password" class="input" pe=".zhuce .s4"  equally="#pwd" vali>
-
-                    <label class="tit">手机号<span class="fr s5">手机号格式不对</span></label>
-                    <input type="text" class="input" pe=".zhuce .s5"  phone="t" vali>
-
-                    <label class="tit">验证码<span class="fr s6">验证码不对,验证码是lukang</span></label>
-                    <input type="text" class="input" pe=".zhuce .s6" custom="t" ele="a" vali>
-
-                    <div class="zhuce_btn">
-                        <button type="submit" id="submit" class="button">提交</button>
-                        <button type="button" id="btn" class="button">查看表单是否全对</button>
-                    </div>
-                </div>
-            </form>
-            <script type="text/javascript">
-                $("#form").vali({
-                    "window_show":false,
-                    "pe":true,
-                    "custom":[{
-                        "ele":"a",
-                        "fun":function(e){
-                            return e.val()=="LUKANG";
-                        }
-                    }]
-                });
-                $("#btn").click(function(){
-                    //vali对象的form方法。
-                    var i=$.vali.form("#form");
-                    alert(i);
-                });
-            </script>
-
-                <pre class="hl"><code class="language-html" data-lang="html"><span class="hl kwa">&lt;div</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;zhuce&quot;</span><span class="hl kwa">&gt;</span>
-    <span class="hl kwa">&lt;label</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;tit&quot;</span><span class="hl kwa">&gt;</span>邮箱<span class="hl kwa">&lt;span</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;fr s1&quot;</span><span class="hl kwa">&gt;</span>邮箱格式不对<span class="hl kwa">&lt;/span&gt;&lt;/label&gt;</span>
-    <span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;input&quot;</span> <span class="hl kwb">pe</span>=<span class="hl str">&quot;.zhuce .s1&quot;</span>  <span class="hl kwb">email</span>=<span class="hl str">&quot;t&quot;</span> vali<span class="hl kwa">&gt;</span>
-
-    <span class="hl kwa">&lt;label</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;tit&quot;</span><span class="hl kwa">&gt;</span>用户名<span class="hl kwa">&lt;span</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;fr s2&quot;</span><span class="hl kwa">&gt;</span>用户名必须在<span class="hl num">6</span>-<span class="hl num">16</span>位<span class="hl kwa">&lt;/span&gt;&lt;/label&gt;</span>
-    <span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;input&quot;</span>  <span class="hl kwb">minmax</span>=<span class="hl str">&quot;6,16&quot;</span> <span class="hl kwb">pe</span>=<span class="hl str">&quot;.zhuce .s2&quot;</span> vali<span class="hl kwa">&gt;</span>
-
-    <span class="hl kwa">&lt;label</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;tit&quot;</span><span class="hl kwa">&gt;</span>密码<span class="hl kwa">&lt;span</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;fr s3&quot;</span><span class="hl kwa">&gt;</span>密码必须在<span class="hl num">6</span>-<span class="hl num">16</span>位,且必须用字母和数字组成<span class="hl kwa">&lt;/span&gt;&lt;/label&gt;</span>
-    <span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;password&quot;</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;input&quot;</span> <span class="hl kwb">id</span>=<span class="hl str">&quot;pwd&quot;</span> <span class="hl kwb">pe</span>=<span class="hl str">&quot;.zhuce .s3&quot;</span> <span class="hl kwb">minmax</span>=<span class="hl str">&quot;6,16&quot;</span> <span class="hl kwb">must</span>=<span class="hl str">&quot;1,2&quot;</span> vali<span class="hl kwa">&gt;</span>
-
-    <span class="hl kwa">&lt;label</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;tit&quot;</span><span class="hl kwa">&gt;</span>确认密码<span class="hl kwa">&lt;span</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;fr s4&quot;</span><span class="hl kwa">&gt;</span>必须和密码一致<span class="hl kwa">&lt;/span&gt;&lt;/label&gt;</span>
-    <span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;password&quot;</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;input&quot;</span> <span class="hl kwb">pe</span>=<span class="hl str">&quot;.zhuce .s4&quot;</span>  <span class="hl kwb">equally</span>=<span class="hl str">&quot;#pwd&quot;</span> vali<span class="hl kwa">&gt;</span>
-
-    <span class="hl kwa">&lt;label</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;tit&quot;</span><span class="hl kwa">&gt;</span>手机号<span class="hl kwa">&lt;span</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;fr s5&quot;</span><span class="hl kwa">&gt;</span>手机号格式不对<span class="hl kwa">&lt;/span&gt;&lt;/label&gt;</span>
-    <span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;input&quot;</span> <span class="hl kwb">pe</span>=<span class="hl str">&quot;.zhuce .s5&quot;</span>  <span class="hl kwb">phone</span>=<span class="hl str">&quot;t&quot;</span> vali<span class="hl kwa">&gt;</span>
-
-    <span class="hl kwa">&lt;label</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;tit&quot;</span><span class="hl kwa">&gt;</span>验证码<span class="hl kwa">&lt;span</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;fr s6&quot;</span><span class="hl kwa">&gt;</span>验证码不对,验证码是LUKANG<span class="hl kwa">&lt;/span&gt;&lt;/label&gt;</span>
-    <span class="hl kwa">&lt;input</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;text&quot;</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;input&quot;</span> <span class="hl kwb">pe</span>=<span class="hl str">&quot;.zhuce .s6&quot;</span> <span class="hl kwb">custom</span>=<span class="hl str">&quot;t&quot;</span> <span class="hl kwb">ele</span>=<span class="hl str">&quot;a&quot;</span> vali<span class="hl kwa">&gt;</span>
-
-    <span class="hl kwa">&lt;div</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;zhuce_btn&quot;</span><span class="hl kwa">&gt;</span>
-        <span class="hl kwa">&lt;button</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;submit&quot;</span> <span class="hl kwb">id</span>=<span class="hl str">&quot;submit&quot;</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;button&quot;</span><span class="hl kwa">&gt;</span>提交<span class="hl kwa">&lt;/button&gt;</span>
-        <span class="hl kwa">&lt;button</span> <span class="hl kwb">type</span>=<span class="hl str">&quot;button&quot;</span> <span class="hl kwb">id</span>=<span class="hl str">&quot;btn&quot;</span> <span class="hl kwb">class</span>=<span class="hl str">&quot;button&quot;</span><span class="hl kwa">&gt;</span>查看表单是否全对<span class="hl kwa">&lt;/button&gt;</span>
-    <span class="hl kwa">&lt;/div&gt;</span>
-<span class="hl kwa">&lt;/div&gt;</span>
-<span class="hl kwa">&lt;script type=&quot;text/javascript&quot;&gt;</span>
-    <span class="hl opt">$(</span><span class="hl str">&quot;#form&quot;</span><span class="hl opt">).</span><span class="hl kwd">vali</span><span class="hl opt">({</span>
-        <span class="hl str">&quot;window_show&quot;</span><span class="hl opt">:</span><span class="hl kwa">false</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;pe&quot;</span><span class="hl opt">:</span><span class="hl kwa">true</span><span class="hl opt">,</span>
-        <span class="hl str">&quot;custom&quot;</span><span class="hl opt">:[{</span>
-            <span class="hl str">&quot;ele&quot;</span><span class="hl opt">:</span><span class="hl str">&quot;a&quot;</span><span class="hl opt">,</span>
-            <span class="hl str">&quot;fun&quot;</span><span class="hl opt">:</span><span class="hl kwa">function</span><span class="hl opt">(</span>e<span class="hl opt">){</span>
-                <span class="hl kwa">return</span> e<span class="hl opt">.</span><span class="hl kwd">val</span><span class="hl opt">()==</span><span class="hl str">&quot;LUKANG&quot;</span><span class="hl opt">;</span>
-            <span class="hl opt">}</span>
-        <span class="hl opt">}]</span>
-    <span class="hl opt">});</span>
-    <span class="hl opt">$(</span><span class="hl str">&quot;#btn&quot;</span><span class="hl opt">).</span><span class="hl kwd">click</span><span class="hl opt">(</span><span class="hl kwa">function</span><span class="hl opt">(){</span>
-        <span class="hl slc">//vali对象的form方法。</span>
-        <span class="hl kwa">var</span> i<span class="hl opt">=$.</span>vali<span class="hl opt">.</span><span class="hl kwd">form</span><span class="hl opt">(</span><span class="hl str">&quot;#form&quot;</span><span class="hl opt">);</span>
-        <span class="hl kwd">alert</span><span class="hl opt">(</span>i<span class="hl opt">);</span>
-    <span class="hl opt">});</span>
-<span class="hl kwa">&lt;/script&gt;</span></code>
-</pre>
-
-            </div>
-
-            <div class="bs-docs-section anli">
-                <h1 id="ly" class="page-header">本人留言</h1>
-
-                <div class="jumbotron">
-                    <h1>Hello, world!</h1>
-                    <p>一切都是为了方便，希望多多指导，多多协助。o(∩_∩)o</p>
-                    <p><a class="btn btn-primary btn-lg" href="https://github.com/1029131145/vali" role="button"><i class="fa fa-github-alt"></i> GitHub</a></p>
-                </div>
-
-            </div>
-
-
         </div>
+    </div>
 
-        <div class="col-md-3" role="complementary">
-            <nav id="navbar-example" class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
-                <ul class="nav bs-docs-sidenav">
-                    <li class="">
-                        <a href="#download">下载</a>
+    <div class="container Modular">
+        <div class="row">
+            <div class="col-lg-4 mo_left">
+                <div class="text-center title">
+                    <img src="img/head.png" width="150" alt="鲁康">
+
+                    <h1 class="h1">鲁康的简历</h1>
+
+                    <h2 class="h2">"Write the Code. Change the World."</h2>
+                </div>
+
+
+                <ul class="side-info">
+                    <li class="someRight">
+                        <dt><i class="fa fa-google-wallet"></i> Contact. 联系方式</dt>
+                        <dd>邮箱： <a href="mailto:1029131145@qq.com" target="_blank">1029131145@qq.com</a></dd>
+                        <dd>微信： lukangadaye</dd>
+                        <dd>QQ： <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1029131145&amp;site=qq&amp;menu=yes"
+                                   target="_blank">1029131145</a></dd>
                     </li>
-                    <li class="">
-                        <a href="#whats-included">包含的内容</a>
-                    </li>
-                    <li>
-                        <a href="#anz">安装</a>
-                    </li>
-                    <li>
-                        <a href="#shux">属性</a>
-                    </li>
-                    <li>
-                        <a href="#yanz">验证种类</a>
-                    </li>
-                    <li>
-                        <a href="#duix">vali对象</a>
-                    </li>
-                    <li>
-                        <a href="#tis">提示框</a>
-                    </li>
-                    <li>
-                        <a href="#anli">验证案例</a>
-                        <ul class="nav">
-                            <li class=""><a href="#yan1">电子邮箱</a></li>
-                            <li class=""><a href="#yan2">手机号</a></li>
-                            <li class=""><a href="#yan3">max</a></li>
-                            <li class=""><a href="#yan4">min</a></li>
-                            <li class=""><a href="#yan5">银行卡</a></li>
-                            <li class=""><a href="#yan6">only验证</a></li>
-                            <li class=""><a href="#yan7">must验证</a></li>
-                            <li class=""><a href="#yan8">first_must验证</a></li>
-                            <li class=""><a href="#yan9">first_cannot验证</a></li>
-                            <li class=""><a href="#yan10">货币验证</a></li>
-                            <li class=""><a href="#yan11">身份证验证</a></li>
-                            <li class=""><a href="#yan12">equally验证</a></li>
-                            <li class=""><a href="#yan13">日期验证</a></li>
-                            <li class=""><a href="#yan14">cannot验证</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#zdy">自定义验证</a>
-                    </li>
-                    <li>
-                        <a href="#ts_zdy">提示框自定义</a>
-                    </li>
-                    <li>
-                        <a href="#cg">成功提示框</a>
-                    </li>
-                    <li>
-                        <a href="#zc">完整注册案例</a>
-                    </li>
-                    <li>
-                        <a href="#ly">作者留言</a>
+                    <li class="someRight">
+                        <dt><i class="fa fa-google-wallet"></i> Application. 应聘岗位</dt>
+                        <dd>前端工程师</dd>
                     </li>
                 </ul>
-                <a class="back-to-top" href="#content">
-                    返回顶部
-                </a>
-            </nav>
+
+
+                <div class="note">
+                    <p>我是一个充满活力、对前端由衷热爱、善于发现问题的前端工程师。</p>
+
+                    <p>我目前正在寻找前端工程师岗位，希望借此机会为贵司献上我的一点绵薄之力，快招我到碗里来吧！</p>
+                </div>
+
+            </div>
+            <div class="col-lg-8 c8 mo_right">
+
+                <div class="h3">
+                    <h3><i class="fa fa-google-wallet"></i> Basic info. 基本信息</h3>
+                </div>
+                <div class="h">
+                    <h3>个人信息：<span>鲁康 / 男 / 1996.05.20</span></h3>
+
+                    <h3>教育经历：<span>湖北高等技术学院 / 北大青鸟 / 2014年毕业</span></h3>
+
+                    <h3>常用ID：<span>游川魚 <i class="fa fa-facebook"></i></span></h3>
+
+                    <h3>GitHub：<a href="https://github.com/1029131145" target="_blank">GitHub.com <i class="fa fa-github"></i></a></h3>
+                </div>
+
+                <div class="h3">
+                    <h3><i class="fa fa-google-wallet"></i> Tech. 技能点</h3>
+                </div>
+
+
+                <div class="h">
+                    <h3>JavaScript：</h3>
+                </div>
+                <div class="pro">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                            <span class="sr-only">85% Complete</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="h">
+                    <h3>HTML：</h3>
+                </div>
+                <div class="pro">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 78%">
+                            <span class="sr-only">85% Complete</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="h">
+                    <h3>CSS：</h3>
+                </div>
+                <div class="pro">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 76%">
+                            <span class="sr-only">85% Complete</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="h">
+                    <h3>NodeJs：</h3>
+                </div>
+                <div class="pro">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 74%">
+                            <span class="sr-only">85% Complete</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="h">
+                    <h3>C#：</h3>
+                </div>
+                <div class="pro">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                            <span class="sr-only">85% Complete</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="h">
+                    <h3>Java：</h3>
+                </div>
+                <div class="pro">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                            <span class="sr-only">85% Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="h3">
+                    <h3><i class="fa fa-google-wallet"></i> Project. 参与的项目</h3>
+                </div>
+
+                <ul class="exp">
+
+
+                    <li>
+                        <div class="circle"></div>
+                        <h4>个人简历（2016 - Now）<a href="http://lukangkang.cc" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
+
+                        <p class="p">一个好看的个人简历页面，原作者：DiyGod。</p>
+
+                        <p class="p">设计原型为 <a href="http://html.love/" target="_blank">html.love</a>，在其设计基础上修改，只是参考了设计，没有拷贝代码。</p>
+                        <img  class="load" src="" data-original="img/10.png">
+                    </li>
+
+                    <li>
+                        <div class="circle"></div>
+                        <h4>微名片，创业经纪人（2016 - Now）<a href="http://yue.vzhuke.com/chain/sale?s=1463983105771-50327" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
+
+                        <p class="p">参于项目中，开发为HTML5，后台程序为NodeJs，产品微名片，可进行后台录入编写，公司、销售、产品，进行线上预约拨打联系方式。</p>
+
+                        <p class="p">使用 NodeJs 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于个人独立完成的项目。</p>
+                        <img  class="load" src="" data-original="img/1.png">
+                    </li>
+
+                    <li>
+                        <div class="circle"></div>
+                        <h4>慧数官网（2015 - 2016）<a href="http://huishu.com.cn/" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
+                        <p class="p">参于项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，慧数，专注于汽车服务。</p>
+                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
+                        <img  class="load" src="" data-original="img/6.png">
+                    </li>
+
+                    <li>
+                        <div class="circle"></div>
+                        <h4>码英雄官网（2015 - 2016）<a href="http://h5.vzhuke.com/chunyan/index.html" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
+                        <p class="p">参于项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，码英雄，代码测试类网站。</p>
+                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
+                        <img  class="load" src="" data-original="img/4.png">
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>春言股权官网（2015 - 2016）<a href="http://h5.vzhuke.com/chunyan1/index.html" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
+                        <p class="p">参于项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，春言股权，公司注册 收转执照。</p>
+                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
+                        <img class="load" src="" data-original="img/5.png">
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <h4>注客科技官网（2015 - 2016）<a href="http://www.vzhuke.com" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
+                        <p class="p">参于项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，注客科技，专注于服务中小企业的服务科技类网站。</p>
+                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
+                        <img class="load" src="" data-original="img/2.png">
+                    </li>
+
+
+                    <li>
+                        <div class="circle"></div>
+                        <h4>注客企业服务手机官网（2015 - 2016）<a href="http://wechat.vzhuke.com/Service/home/id/1.html" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
+
+                        <p class="p">参于项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，注客科技，专注于服务中小企业的服务科技类网站。</p>
+
+                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
+                        <img class="load" src="" data-original="img/3.png">
+                    </li>
+
+
+
+                    <li>
+                        <div class="circle"></div>
+                        <h4>财融天下官网（2015 - 2016）<a href="http://cairongtianxia.com/" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
+
+                        <p class="p">参于项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于基金平台的网站，量化对冲，阳光私募，资管产品，新三板，信托产品，股票排行，财融天下，打造投资人最信赖的金融云平台。</p>
+
+                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
+                        <img class="load" src="" data-original="img/7.png">
+                    </li>
+
+
+                    <li>
+                        <div class="circle"></div>
+                        <h4>掌帮网官网（2015 - 2016）<a href="http://zhangbangwang.com/" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
+
+                        <p class="p">参于项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于外包网站，掌帮网，专注互联网策划开发与运营的科技企业。</p>
+
+                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
+                        <img class="load" src="" data-original="img/8.png">
+                    </li>
+
+                    <li>
+                        <div class="circle"></div>
+                        <h4>其他网站（2014 - 2015）</h4>
+
+                        <p class="p">2014到2015年做过2个网站，一个是P2P平台，一个是建筑信息分享平台，因为已经下线，所以没有Demo，抱歉，在此处记录一下</p>
+
+                        <p class="p">聚融财富（P2P），诚筑道（建筑信息平台）</p>
+                        <img class="load" src="">
+                    </li>
+
+                </ul>
+
+                <div class="h3">
+                    <h3><i class="fa fa-google-wallet"></i> jQuery Plugin. 插件</h3>
+                </div>
+
+                <ul class="exp">
+
+                    <li>
+                        <div class="circle"></div>
+                        <h4>Vail.js（2015 - 2016）<a href="https://github.com/1029131145/vali" class="label label-primary" target="_blank"><i class="fa fa-link"></i> Github源码</a> <a href="http://1029131145.github.io/vali/" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo API</a></h4>
+
+                        <p class="p">自己编写的基于jQuery的一款验证类插件，vail，包含22种验证，自定义验证，自定义提示和一个vail对象。</p>
+
+                        <img class="load" src="" data-original="img/9.png">
+                    </li>
+
+                </ul>
+
+            </div>
         </div>
+    </div>
 
+
+    <div class="container Modular fff">
+        <div class="row">
+            <div class="col-lg-12 c8 mo_right">
+                <div class="h3">
+                    <h3><i class="fa fa-cube"></i> Life. 人生时间轴</h3>
+                </div>
+
+
+                <div class="main">
+                    <ul class="cbp_tmtimeline">
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>10-15 入职</span> <span>2015</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>北京注客科技有限公司</h2>
+                                <p>
+                                    为响应国家“互联网+”;“大众创业、万众创新”;“普惠金融”的号召，积极推动科技创新，春言集团整合多年来积累的资产、项目、资本、资源等方面的优势，依托“注客”这一品牌，倾力打造中小企业创业者扶持B2C平台。汇聚创业者、投资人、创业服务机构、产业资源、金融资源等各类资源，形成完整的创业孵化生态系统。基于B2C模式、以互联网思维为创业企业提供全方位的创业服务，全力支持创业者改变世界、创造未来！ “注客”的含义：关注企业，倾注资源，资本注入 依托“注客”平台，从孵化扶持，到经营扶持及综合金融解决方案，再到“品牌通道+众筹策略+合伙人”的终极商业模式——让所有中小企业创业者都能在平台上成立、发展、交易直至成熟。公司联合第三方专业机构，为孵化企业提供全面优质的创业服务，为创业企业的快速成长提供全方位支撑。
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>02-01 入职</span> <span>2015</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>北京淘伟科技有限公司</h2>
+                                <p>产品的核心业务为p2p网络系统开发与应用交易，该产品旨在帮助金融、理财、投资、p2p理财公司，
+                                    打造网络p2p平台，拓宽投资领域，使信贷平台拥有一个稳健、安全、诚信、透明的网络信贷平台。  一切经营
+                                    活动以客户为中心，从关心客户入手，调动公司的整体资源，来满足客户的多样化和个性化需求。开始大力发
+                                    展it服务和基于客户应用软件开发的业务。  淘伟科技，由一直服务于it前沿的精英创办，本着求实、创新、
+                                    与客户共同成长的谦虚态度服务于广大客户。我们的技术团队，对行业内各大p2p信贷网站有着深入的研究，人
+                                    人贷、拍拍贷、陆金所、e速贷、zopa、lending club等，除此之外我们还对百度、google搜索引擎有着长久
+                                    的专研，我们编写的代码更符合搜索引擎的搜索...</p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-13 05:36"><span>03-01 入职</span> <span>2014</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>北京聚融财富管理有限公司</h2>
+                                <p>“普惠金融，造福民生”是公司经营管理的核心理念。随着互联网和信息技术的推广，公司推出了P2P投资管理服务平台，服务两端客户，为百姓投资者开辟一个高效、稳健、透明、安全的投资渠道；另一方面，未来为5千万中小微实体企业，以及个人有效解决“借款，投资”的问题，立志打造最具有影响力的P2P借贷咨询服务平台，为推动民间金融资本高效发展流通贡献一份力量。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-15 13:15"><span>05-01 入学</span> <span>2012</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>北大青鸟</h2>
+                                <p>北大青鸟APTECH成立于1999年，依托北京大学 优质雄厚的教育资源和背景，秉承“教育改变生活”的发展理念，一直致力于培养中国IT技能型紧缺人才。<br>
+                                    北大青鸟以完善的标准化管理为依托实现了体系的规模化发展，200余家授权培训中心遍布全国60多个重要城市，全国合作院校超过600所，同10000余家知名企业建立了战略合作伙伴关系，累计培养和输送80余万IT职业化人才进入IT行业，得到了社会各界认可。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-16 21:30"><span>05-01 入学</span> <span>2010</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>湖北高等技术学院</h2>
+                                <p>
+                                    学校位于孝昌县老城区（花园新大桥东头，李家林115号），地理位置优越，交通便利，距离花园火车站不足1000米，距离县长途汽车站不足两公里，且有县3路公汽从学校门前经过。学校占地面积100余亩，建筑面积12000 m2，学校固定资产达2000余万元。
+                                    <br>
+                                    学校教学、生活设施布局合理，功能齐全，校园坏境优雅，文化气氛浓厚。学校有学生食堂，有男生、女生宿舍楼各一栋。学校具有机械钳工实训室、钢琴房、舞蹈房、画室及多个计算机房。
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-17 12:11"><span>05-1 入学</span> <span>2008</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>湖北省孝昌县小河镇中学</h2>
+                                <p>小河镇位于孝昌县东北部，南接县城关花园镇，北与大悟县芳畈镇毗邻，东与小悟乡接壤，西与王店镇、卫店镇相连。地势东北高而西南低，大部分是丘陵。境内有澴河和沙窝河，金盆和芳畈两大水系及灌溉系统。2008年，有水库11座，当家塘堰1530口，泵站16座，过河大桥4座。耕层土壤主要有粘土、沙壤土，大部分为黄壤土。为针阔叶混交林。属亚热带地区，气候温和，日照充足，雨量充沛，四季分明，全年平均气温22℃。境内主要矿产资源有镁矿、磷矿、重晶石、石灰石、河砂石及丰富的碳酸钙富锶低钠天然饮用矿泉水资源。易发生雷电、洪水、霜冻、干旱等自然灾害。
+                                    <br>
+
+                                    <img class="load" width="480"  src="" style="max-width: 100%" data-original="img/11.jpg">
+                                </p>
+
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-18 09:56"><span>05-20 出生</span> <span>1996</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>中国 - 北京</h2>
+                                <p>感谢我的父母把我带到这个美丽的世界上，o(^▽^)o。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-center top">
+        <a href="javascript:_top();" class="hvr-grow-rotate">
+            <img src="img/top.png" alt="">
+        </a>
+    </div>
+
+</div>
+
+<div id="somedialog" class="dialog" style="z-index: 99999">
+    <div class="dialog__overlay"></div>
+    <div class="dialog__content">
+        <h2>微信扫描可以加我哟！</h2>
+
+        <h2>
+            <img src="img/rwm.png" class="rwm" style="max-width: 100%" alt="鲁康">
+        </h2>
+
+        <div>
+            <button class="action" data-dialog-close>Close</button>
+        </div>
     </div>
 </div>
 
-<div class="jumbotron footer1">
-    <canvas id="canvas2"></canvas>
-    <div class="container">
-    <p class="text-right">Copyright 2015, LuKang</p>
-        <h3>如彼翰林鸟,</h3>
-        <h3>双栖一朝只。</h3>
-        <h3>如彼游川鱼,</h3>
-        <h3>比目中路析。</h3>
-        <h3>...</h3>
-    </div>
-</div>
-
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script src="js/highlight.min.js"></script>
-<script type="text/javascript">
-    var _top = $("#navbar-example").offset().top;
-    $(window).scroll(function () {
-        var winPos = $(window).scrollTop();
-        if (parseInt(winPos)+70 > _top) {
-            $("#navbar-example").removeClass("affix-top");
-            $("#navbar-example").addClass("affix");
-
-            $("#top").addClass("fixed-top");
-
-        } else {
-            $("#navbar-example").removeClass("affix");
-            $("#navbar-example").addClass("affix-top");
-            $("#top").removeClass("fixed-top");
-        }
-    });
-
-    hljs.initHighlightingOnLoad();
-    $(document).ready(function() {
-        $(".code_http").each(function(i, block) {
-            hljs.highlightBlock(block);
-        });
-    });
-</script>
+<script type="text/javascript" src="js/mp3.js"></script>
 <script type="text/javascript" src="js/canvas.js"></script>
-<script type="text/javascript">
-    console.log("QQ：1029131145");
-    console.log("*********************************");
-    console.log("如彼翰林鸟\n双栖一朝只\n如彼游川鱼\n比目中路析\n...");
-</script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+<script src="DialogEffects/js/classie.js"></script>
+<script src="DialogEffects/js/dialogFx.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+
 </body>
-</html> 
+</html>

@@ -1,10 +1,8 @@
-
-
 $(function(){
-    var canvas = document.querySelector('#canvas1'),
-        ctx = canvas.getContext('2d')
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    var canvas = document.querySelector('#canvas'),
+        ctx = canvas.getContext('2d');
+    //canvas.width = window.innerWidth;
+    //canvas.height = window.innerHeight;
     ctx.lineWidth = .3;
     ctx.strokeStyle = (new Color(150)).style;
 

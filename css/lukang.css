@@ -1,0 +1,96 @@
+/*LuKang.less > Versions 2.0*/
+/***网页默认设置***/
+/*字体颜色*/
+/*什么字体*/
+/*字体大小*/
+/*边框颜色*/
+/*渐变样式，在手机端不能使用，只针对于背景颜色和字体颜色*/
+/*动画*/
+/*旋转样式*/
+/*3D旋转样式-IE10以下不支持*/
+/*快速形成一个3d磁场*/
+/*快速设置宽高度*/
+/*快速设置一个正方形*/
+/*快速设置浮动*/
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+/*快速设置鼠标点击小手样式*/
+/*快速设置圆角 IE9以下不支持此样式*/
+/*快速设置一个按钮*/
+/*快速设置一个进度条*/
+/*快速设置一个banner切换 配合 jquery.SuperSlide.2.1.1.js 插件*/
+/*快速设置一个导航菜单,包括导航下拉菜单。*/
+/*快速设置字体颜色和字体大小*/
+/*快速设置背景阴影*/
+/*快速设置字体阴影*/
+/*快速设置内边距*/
+/*快速设置外边距*/
+/*快速设置对齐*/
+.text-align-center {
+  text-align: center;
+}
+.text-align-left {
+  text-align: left;
+}
+.text-align-right {
+  text-align: right;
+}
+/*删除边框*/
+.borderDel {
+  border: 0px;
+}
+/*快速设置高度并居中*/
+/*
+content-box，border和padding不计算入width之内  --默认
+padding-box，padding计算入width内
+border-box，border和padding计算入width之内，其实就是怪异模式了~
+*/
+/*透明 ps:请输入0-1 比如：0.5*/
+/*边框的线样式快速设置*/
+/*设置居上的px,用于上下居中*/
+/*----------------------------------------------------------*/
+/*修改自带标签的一些特性*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+/*修改自带标签的一些特性*/
+/*自己写的常用样式*/
+.dib {
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.fl {
+  float: left !important;
+}
+.fr {
+  float: right !important;
+}
+.lk {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  /*note: "..此处里面的样式有问题,请联系鲁康。"*/
+}
+.lk .main {
+  width: 1000px;
+  /*note:"..此处调整整体宽度.."*/
+}
+/*自己写的常用样式*/
