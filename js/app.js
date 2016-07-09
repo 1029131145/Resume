@@ -40,3 +40,7 @@ function _top(){
 
 
 }
+
+function weixin(){
+    $("#weixin").click();
+}

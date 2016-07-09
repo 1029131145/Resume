@@ -98,13 +98,6 @@ body {
   background-color: #fff;
   overflow-x: hidden;
 }
-.canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background-color: #F7FAFC;
-}
 .lk_body {
   padding-top: 50px;
   position: absolute;
@@ -227,6 +220,13 @@ body {
   height: 500px;
   padding-top: 50px;
 }
+.lk_body .footer p {
+  color: #000;
+  font-size: 13px;
+}
+.lk_body .footer p a {
+  font-size: 13px;
+}
 li,
 ul {
   list-style: none;
@@ -285,4 +285,18 @@ img.load {
   background-image: url("../img/loading.png");
   background-repeat: no-repeat;
   background-position: center center;
+}
+#bgc {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#bgc canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #F7FAFC;
 }

@@ -34,11 +34,11 @@
     <script src="DialogEffects/js/modernizr.custom.js"></script>
 
 
-    <!--<script src="tmtimeline/js/modernizr.custom.js"></script>-->
+    <script src="js/three.min.js"></script>
 
 </head>
 <body>
-<canvas id="canvas" class="canvas hidden-xs" width="1000px" height="50px"></canvas>
+<!--<canvas id="canvas" class="canvas hidden-xs" width="1000px" height="50px"></canvas>-->
 <div class="lk_body">
     <div class="lk_float" id="float">
         <div class="container ">
@@ -48,19 +48,19 @@
                 <a href="#" class="fl resume"><i class="fa fa-tag"></i> Resume 鲁康</a>
 
                 <div class="button-group">
-                    <button href="javascript:;" data-dialog="somedialog" class="button button-primary rwm_btn">
+                    <button href="javascript:;" id="weixin" data-dialog="somedialog" class="button button-primary rwm_btn ">
                         <i class="fa fa-wechat"></i>
                     </button>
                     <a href="http://weibo.com/279537953" target="_blank"
-                       class="button button-primary hidden-xs">
+                       class="button button-primary hidden-xs ">
                         <i class="fa fa-weibo"></i>
                     </a>
                     <a href="https://github.com/1029131145" target="_blank"
-                       class="button button-primary hidden-xs">
+                       class="button button-primary hidden-xs ">
                         <i class="fa fa-github"></i>
                     </a>
                     <audio id="audio" style="display: none"></audio>
-                    <a href="javascript:;" id="audio_btn" class="button button-primary">
+                    <a href="javascript:;" id="audio_btn" class="button button-primary ">
                         <i class="fa fa-music fa-spin"></i>
                     </a>
 
@@ -85,9 +85,8 @@
                     <li class="someRight">
                         <dt><i class="fa fa-google-wallet"></i> Contact. 联系方式</dt>
                         <dd>邮箱： <a href="mailto:1029131145@qq.com" target="_blank">1029131145@qq.com</a></dd>
-                        <dd>微信： lukangadaye</dd>
-                        <dd>QQ： <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1029131145&amp;site=qq&amp;menu=yes"
-                                   target="_blank">1029131145</a></dd>
+                        <dd>微信： <a href="javascript:weixin();" target="_blank">lukangadaye</a></dd>
+                        <dd>企鹅： <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1029131145&amp;site=qq&amp;menu=yes" target="_blank">1029131145</a></dd>
                     </li>
                     <li class="someRight">
                         <dt><i class="fa fa-google-wallet"></i> Application. 应聘岗位</dt>
@@ -202,7 +201,7 @@
                         <div class="circle"></div>
                         <h4>个人简历（2016 - Now）<a href="http://lukangkang.cc" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
 
-                        <p class="p">一个好看的个人简历页面，原作者：DiyGod。</p>
+                        <p class="p">一个好看的个人简历页面。主题色是蓝色，基于bootstrap开发，用到的插件有DialogEffects、fontawesome、lazyload、jquery。</p>
 
                         <p class="p">设计原型为 <a href="http://html.love/" target="_blank">html.love</a>，在其设计基础上修改，只是参考了设计，没有拷贝代码。</p>
                         <img  class="load" src="" data-original="img/10.png">
@@ -414,6 +413,10 @@
         </a>
     </div>
 
+    <footer class="text-center footer">
+        <p>Theme by <a href="https://github.com/1029131145/Resume" target="_blank">Lukang</a>. Made with <i class="fa fa-heart" style="color: #d43f57;"></i> by Lukang Resume. 最后更新于2016年7月10日</p>
+    </footer>
+
 </div>
 
 <div id="somedialog" class="dialog" style="z-index: 99999">
@@ -431,8 +434,13 @@
     </div>
 </div>
 
+
+
+
+
+
 <script type="text/javascript" src="js/mp3.js"></script>
-<script type="text/javascript" src="js/canvas.js"></script>
+<script type="text/javascript" src="js/canvas1.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
 <script src="DialogEffects/js/classie.js"></script>
