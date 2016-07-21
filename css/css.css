@@ -186,15 +186,14 @@ body {
 .lk_body .Modular .note {
   text-indent: 2em;
   margin-top: 90px;
-  color: #136aaa;
-  font-size: 23px;
+  color: #fff;
+  font-size: 15px;
   margin-bottom: 90px;
 }
 .lk_body .Modular .c8 .h3 {
   color: #1B9AF7;
   border-bottom: 1px solid #1B9AF7;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  padding-top: 10px;
 }
 .lk_body .Modular .c8 .h {
   padding-left: 31px;
