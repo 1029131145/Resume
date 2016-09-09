@@ -10,16 +10,11 @@
     <link rel="icon" href="favicon.ico">
 
     <link type="text/css" rel="stylesheet" href="css/css.css"/>
-
-    <link type="text/css" rel="stylesheet" href="css/hover.css"/>
-
     <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="css/buttons.css"/>
     <link type="text/css" rel="stylesheet" href="fontawesome/css/font-awesome.min.css"/>
-    <!--<link type="text/css" rel="stylesheet" href="css/style.css"/>-->
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <!--<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>-->
 
 
 
@@ -38,7 +33,6 @@
 
 </head>
 <body>
-<!--<canvas id="canvas" class="canvas hidden-xs" width="1000px" height="50px"></canvas>-->
 <div class="lk_body">
     <div class="lk_float" id="float">
         <div class="container ">
@@ -61,7 +55,7 @@
                     </a>
                     <audio id="audio" style="display: none"></audio>
                     <a href="javascript:;" id="audio_btn" class="button button-primary ">
-                        <i class="fa fa-music fa-spin"></i>
+                        <i class="fa fa-music fa-spin"></i>&emsp;<small id="audio_text">123</small>
                     </a>
 
                 </div>
@@ -416,7 +410,7 @@
 
 
     <div class="text-center top">
-        <a href="javascript:_top();" class="hvr-grow-rotate">
+        <a href="javascript:_top();">
             <img src="img/top.png" alt="">
         </a>
     </div>
@@ -448,13 +442,61 @@
 
 
 <script type="text/javascript" src="js/mp3.js"></script>
-<script type="text/javascript" src="js/canvas1.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
 <script src="DialogEffects/js/classie.js"></script>
 <script src="DialogEffects/js/dialogFx.js"></script>
 <script src="js/jquery.lazyload.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
+
+
+<script type="text/javascript" src="Images/jquery.js"></script>
+<script type="text/javascript" src="Images/ThreeWebGL.js"></script>
+<script type="text/javascript" src="Images/ThreeExtras.js"></script>
+<script type="text/javascript" src="Images/Detector.js"></script>
+<script type="text/javascript" src="Images/RequestAnimationFrame.js"></script>
+
+<script id="vs" type="x-shader/x-vertex">
+
+			varying vec2 vUv;
+
+			void main() {
+
+				vUv = uv;
+
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+			}
+
+    </script>
+<script id="fs" type="x-shader/x-fragment">
+
+			uniform sampler2D map;
+
+			uniform vec3 fogColor;
+
+			uniform float fogNear;
+
+			uniform float fogFar;
+
+			varying vec2 vUv;
+
+			void main() {
+
+				float depth = gl_FragCoord.z / gl_FragCoord.w;
+
+				float fogFactor = smoothstep( fogNear, fogFar, depth );
+
+				gl_FragColor = texture2D( map, vUv );
+
+				gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+
+				gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+
+			}
+    </script>
+<script type="text/javascript" src="Images/cloud.js" ></script>
+
 
 <script>
 (function(){

@@ -3,6 +3,7 @@ var currentIndex = -1;
 var audio = document.getElementById("audio");
 
 var mlist = [
+    "Time - Hans Zimmer",
     "最长的电影-钢琴曲",
     "梦中的婚礼-钢琴曲",
     "稻香-钢琴曲",
@@ -16,6 +17,7 @@ var mlist = [
 ];
 
 var msrc = [
+    "http://cc.stream.qqmusic.qq.com/C200003M2Vlm1dd1SH.m4a?vkey=44AD34A84FB3FC138169970C560C11CDE27142BE8770816B00A0A5038DB40C011F7E7A8BE62486263C120389FA0D2C1577269EB67B33630D&guid=3106138169&fromtag=30",
     "http://cc.stream.qqmusic.qq.com/C100004TEIGS04HJrh.m4a?fromtag=52",
     "http://cc.stream.qqmusic.qq.com/C100003BiYM71E0j7X.m4a?fromtag=52",
     "http://cc.stream.qqmusic.qq.com/C1000044MHjN2xQasu.m4a?fromtag=52",
@@ -31,7 +33,7 @@ var msrc = [
 var btn = $("#audio_btn");
 
 if (currentIndex == -1) {
-    _qie();
+    _qie(0);
 }
 function Song() {
     if (audio.paused) {
@@ -48,14 +50,19 @@ audio.addEventListener('ended', function () {
 }, false);
 
 
-function _qie(){
-    with (currentIndex == num) {
-        num = GetRandomNum(msrc.length);
+function _qie(u){
+    if(isNaN(u)){
+        with (currentIndex == num) {
+            num = GetRandomNum(msrc.length);
+        }
+    }else{
+        num=u;
     }
     currentIndex = num;
     num = currentIndex;
     audio.src = msrc[currentIndex];
     btn.attr("title", mlist[currentIndex]);
+    $('#audio_text').html(mlist[currentIndex]);
 }
 
 
