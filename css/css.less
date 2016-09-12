@@ -5,7 +5,6 @@ body {
   overflow-x: hidden;
 }
 
-
 @font-face {
   font-family: 'Architects Daughter';
   font-style: normal;
@@ -14,7 +13,7 @@ body {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
-.Architects{
+.Architects {
   font-family: 'Architects Daughter' !important;
 }
 
@@ -32,13 +31,13 @@ body {
     left: 0;
     z-index: 3;
     width: 100%;
-    background-color: rgba(27,154,247,0.7);
+    background-color: rgba(27, 154, 247, 0.7);
     height: 40px;
-    .button{
+    .button {
       background-color: transparent;
       font-size: 12px !important;
-      &:hover{
-        background-color: rgb(27,154,247);
+      &:hover {
+        background-color: rgb(27, 154, 247);
       }
     }
     .resume {
@@ -76,7 +75,7 @@ body {
     overflow: hidden;
     background-color: #1B9AF7;
 
-    &.fff{
+    &.fff {
       background-color: #fff;
     }
 
@@ -84,7 +83,7 @@ body {
       color: #fff;
       padding: 15px;
     }
-    .mo_right{
+    .mo_right {
       background-color: #fff;
     }
 
@@ -126,44 +125,44 @@ body {
       margin-bottom: 90px;
     }
 
-    .c8{
-      .h3{
+    .c8 {
+      .h3 {
         color: #1B9AF7;
         border-bottom: 1px solid #1B9AF7;
         padding-top: 10px;
         //padding-bottom: 20px;
       }
-      .h{
+      .h {
         padding-left: 31px;
         color: #000;
-        h3{
+        h3 {
           font-size: 20px;
         }
-        span{
+        span {
           font-size: 17px;
           color: #616161;
         }
       }
-      .progress-bar-info{
+      .progress-bar-info {
         background-color: #1B9AF7;
       }
-      .pro{
+      .pro {
         padding-left: 31px;
       }
-      .progress{
-        border-radius:0;
+      .progress {
+        border-radius: 0;
       }
     }
   }
-  .top{
+  .top {
     height: 500px;
     padding-top: 50px;
   }
-  .footer{
-    p{
+  .footer {
+    p {
       color: #000;
       font-size: 13px;
-      a{
+      a {
         font-size: 13px;
       }
     }
@@ -189,6 +188,7 @@ a {
   left: -31px;
   top: 5px
 }
+
 .exp {
   border-left: 3px solid #1B9AF7;
   margin-left: 15px
@@ -206,13 +206,14 @@ a {
   margin: 0 0 20px 20px;
   padding-bottom: 20px;
 }
-.exp li{
-  h4{
+
+.exp li {
+  h4 {
     font-size: 20px;
     color: #000;
     padding-top: 4px;
   }
-  .p{
+  .p {
     font-size: 17px;
     color: #616161;
     text-indent: 1em;
@@ -233,15 +234,13 @@ a {
   width: inherit
 }
 
-
-img.load{
+img.load {
   background-image: url("../img/loading.png");
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-
-#bgc{
+#bgc {
   .fixed;
   .wh-square(100%);
   top: 0;
@@ -255,3 +254,80 @@ img.load{
   }
 }
 
+.button-group .button {
+  padding: 0 20px !important;
+}
+
+.audio_btn {
+  .fl;
+  .relative;
+  min-width: 145px;
+  #audio_btn{
+    min-width: 145px;
+  }
+  .volume {
+    cursor: default !important;
+    .absolute;
+    width: 100%;
+    height: 40px;
+    background-color: #0f0f0f;
+    top: 20px;
+    background-color: rgba(27, 154, 247, 0.7);
+    left: 0;
+    .transition;
+    .opacity(0);
+    padding: 0 20px;
+    .cont {
+      width: 100%;
+      .relative;
+      height: 40px;
+      .b {
+        .dib;
+        width: 100%;
+        height: 3px;
+        background-color: rgb(27, 154, 247);
+        .border-radius;
+        .fl;
+        margin-top: (40-3)/2px;
+        overflow: hidden;
+        .bo{
+          width: 50%;
+          .fl;
+          .dib;
+          height: 3px;
+          background-color: #fff;
+        }
+      }
+      .a {
+        .dib;
+        .border-radius(50%);
+        .wh-square(15px);
+        background-color: #fff;
+        .box-shadow(0, 0, 10px, #1B9AF7);
+        .absolute;
+        top: 50%;
+        margin-top: -7.5px;
+        margin-left: -7.5px;
+        left: 50%;
+        z-index: 9999;
+        cursor: pointer !important;
+      }
+    }
+  }
+  &:hover {
+    .volume {
+      top: 40px;
+      .opacity(1);
+    }
+  }
+}
+
+@import "../bootstrap/css/bootstrap.min.css";
+@import "buttons.css";
+@import "../fontawesome/css/font-awesome.min.css";
+@import "../tmtimeline/css/default.css";
+@import "../tmtimeline/css/component.css";
+@import "../DialogEffects/css/normalize.css";
+@import "../DialogEffects/css/demo.css";
+@import "../DialogEffects/css/dialog.css";
+@import "../DialogEffects/css/dialog-sandra.css";
