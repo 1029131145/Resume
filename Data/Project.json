@@ -1,0 +1,91 @@
+[
+  {
+    "name": "个人简历（2016 - Now）",
+    "demo": "http://lukangkang.cc/",
+    "html": [
+      "一个好看的个人简历页面。主题色是蓝色，基于bootstrap开发，用到的插件有DialogEffects、fontawesome、lazyload、jquery。",
+      "设计原型为 html.love，在其设计基础上修改，只是参考了设计，没有拷贝代码。"
+    ],
+    "img": "10.png"
+  },
+  {
+    "name": "微名片，创业经纪人（2016 - Now）",
+    "demo": "http://yue.vzhuke.com/chain/sale?s=1463983105771-50327",
+    "html": [
+      "参与项目中，开发为HTML5，后台程序为NodeJs，产品微名片，可进行后台录入编写，公司、销售、产品，进行线上预约拨打联系方式。",
+      "使用 NodeJs 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于个人独立完成的项目。"
+    ],
+    "img": "1.png"
+  },
+  {
+    "name": "慧数官网（2015 - 2016）",
+    "demo": "http://huishu.com.cn/",
+    "html": [
+      "参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，慧数，专注于汽车服务。",
+      "使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。"
+    ],
+    "img": "6.png"
+  },
+  {
+    "name": "码英雄官网（2015 - 2016）",
+    "demo": "http://h5.vzhuke.com/chunyan/index.html",
+    "html": [
+      "参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，码英雄，代码测试类网站。",
+      "使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。"
+    ],
+    "img": "4.png"
+  },
+  {
+    "name": "春言股权官网（2015 - 2016）",
+    "demo": "http://h5.vzhuke.com/chunyan1/index.html",
+    "html": [
+      "参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，春言股权，公司注册 收转执照。",
+      "使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。"
+    ],
+    "img": "5.png"
+  },
+  {
+    "name": "注客科技官网（2015 - 2016）",
+    "demo": "http://www.vzhuke.com/",
+    "html": [
+      "参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，注客科技，专注于服务中小企业的服务科技类网站。",
+      "使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。"
+    ],
+    "img": "2.png"
+  },
+  {
+    "name": "注客企业服务手机官网（2015 - 2016）",
+    "demo": "http://www.vzhuke.com/",
+    "html": [
+      "参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，注客科技，专注于服务中小企业的服务科技类网站。",
+      "使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。"
+    ],
+    "img": "3.png"
+  },
+  {
+    "name": "财融天下官网（2015 - 2016）",
+    "demo": "http://cairongtianxia.com/",
+    "html": [
+      "参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于基金平台的网站，量化对冲，阳光私募，资管产品，新三板，信托产品，股票排行，财融天下，打造投资人最信赖的金融云平台。",
+      "使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。"
+    ],
+    "img": "7.png"
+  },
+  {
+    "name": "掌帮网官网（2015 - 2016）",
+    "demo": "http://zhangbangwang.com/",
+    "html": [
+      "参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于外包网站，掌帮网，专注互联网策划开发与运营的科技企业。",
+      "使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。"
+    ],
+    "img": "8.png"
+  },
+  {
+    "name": "其他网站（2014 - 2015）",
+    "html": [
+      "2014到2015年做过2个网站，一个是P2P平台，一个是建筑信息分享平台，因为已经下线，所以没有Demo，抱歉，在此处记录一下",
+      "聚融财富（P2P），诚筑道（建筑信息平台）"
+    ],
+    "img": ""
+  }
+]

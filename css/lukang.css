@@ -1,5 +1,11 @@
 /*LuKang.less > Versions 2.0*/
 /***网页默认设置***/
+@font-face {
+  font-family: 'mi';
+  src: url('../fontawesome/fonts/mi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 /*字体颜色*/
 /*什么字体*/
 /*字体大小*/
@@ -60,7 +66,7 @@ border-box，border和padding计算入width之内，其实就是怪异模式了~
 * {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+  font-family: mi, "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

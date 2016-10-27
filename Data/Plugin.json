@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Simple Switch（2015 - 2016）",
+    "git": "http://switch.lukangkang.cc/",
+    "demo": "http://switch.lukangkang.cc/",
+    "html": [
+      "Simple Switch 一个简单而强大的开关插件。"
+    ],
+    "img": "12.jpg"
+  },
+  {
+    "name": "Vail.js（2015 - 2016）",
+    "git": "https://github.com/1029131145/vali",
+    "demo": "http://1029131145.github.io/vali/",
+    "html": [
+      "自己编写的基于jQuery的一款验证类插件，vail，包含22种验证，自定义验证，自定义提示和一个vail对象。"
+    ],
+    "img": "9.png"
+  }
+]

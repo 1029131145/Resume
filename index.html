@@ -14,27 +14,28 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="DialogEffects/js/modernizr.custom.js"></script>
     <script src="js/three.min.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
 
 </head>
-<body>
+<body id="body">
 <div class="lk_body">
     <div class="lk_float" id="float">
         <div class="container ">
             <div class="row text-right">
 
 
-                <a href="#" class="fl resume"><i class="fa fa-diamond"></i> Resume 鲁康</a>
+                <a href="#" class="fl resume"><i class="fa fa-diamond"></i> {{Main.resume}}</a>
 
                 <div class="button-group">
                     <button href="javascript:;" id="weixin" data-dialog="somedialog"
                             class="button button-primary rwm_btn ">
                         <i class="fa fa-wechat"></i>
                     </button>
-                    <a href="http://weibo.com/279537953" target="_blank"
+                    <a href="{{Main.weibo}}" target="_blank"
                        class="button button-primary hidden-xs ">
                         <i class="fa fa-weibo"></i>
                     </a>
-                    <a href="https://github.com/1029131145" target="_blank"
+                    <a href="{{Main.git}}" target="_blank"
                        class="button button-primary hidden-xs ">
                         <i class="fa fa-github"></i>
                     </a>
@@ -63,32 +64,30 @@
                 <div class="text-center title">
                     <img src="img/head.png" width="150" alt="鲁康">
 
-                    <h1 class="h1">鲁康的简历</h1>
+                    <h1 class="h1">{{Main.name}}</h1>
 
-                    <h2 class="h2 Architects">"Write the Code. Change the World."</h2>
+                    <h2 class="h2 Architects">{{Main.arc}}</h2>
                 </div>
 
 
                 <ul class="side-info">
                     <li class="someRight">
                         <dt><i class="fa fa-google-wallet"></i> Contact. 联系方式</dt>
-                        <dd>邮箱： <a href="mailto:1029131145@qq.com" target="_blank">1029131145@qq.com</a></dd>
+                        <dd>邮箱： <a href="mailto:{{Main.e}}" target="_blank">{{Main.e}}</a></dd>
                         <dd>微信： <a href="javascript:weixin();" target="_blank">点击微信扫描 <i
                                 class='fa fa fa-camera-retro'></i></a></dd>
-                        <dd>企鹅： <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1029131145&amp;site=qq&amp;menu=yes"
-                                   target="_blank">1029131145</a></dd>
+                        <dd>企鹅： <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={{Main.qq}}&amp;site=qq&amp;menu=yes"
+                                   target="_blank">{{Main.qq}}</a></dd>
                     </li>
                     <li class="someRight">
                         <dt><i class="fa fa-google-wallet"></i> Application. 应聘岗位</dt>
-                        <dd>前端工程师</dd>
+                        <dd>{{Main.zw}}</dd>
                     </li>
                 </ul>
 
 
                 <div class="note">
-                    <p>我是一个充满活力、对编程由衷热爱、善于发现问题的前端工程师。</p>
-
-                    <p>我目前正在寻找前端工程师岗位，希望借此机会为贵司献上我的一点绵薄之力，快招我到碗里来吧！</p>
+                    <p v-for="i in Main.int">{{i}}</p>
                 </div>
 
             </div>
@@ -98,209 +97,43 @@
                     <h3><i class="fa fa-google-wallet"></i> Basic info. 基本信息</h3>
                 </div>
                 <div class="h">
-                    <h3>个人信息：<span>鲁康 / 男 / 1996.05.20</span></h3>
-
-                    <h3>教育经历：<span>北大青鸟 / 2013年末毕业</span></h3>
-
-                    <h3>GitHub：<a href="https://github.com/1029131145" target="_blank">GitHub.com <i
-                            class="fa fa-github"></i></a></h3>
+                    <h3 v-for="i in Main.info">{{i.n}}：<span>{{{i.c}}}</span></h3>
                 </div>
 
                 <div class="h3">
                     <h3><i class="fa fa-google-wallet"></i> Tech. 技能点</h3>
                 </div>
 
+                <template v-for="t in Main.Tech">
+                <div class="h">
+                    <h3>{{t.n}}：</h3>
+                </div>
+                <div class="pro">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                             aria-valuemin="0" aria-valuemax="100" style="width: {{t.s}}">
+                            <span class="sr-only">{{t.s}} Complete</span>
+                        </div>
+                    </div>
+                </div>
+                </template>
 
-                <div class="h">
-                    <h3>JavaScript：</h3>
-                </div>
-                <div class="pro">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-                             aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                            <span class="sr-only">85% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="h">
-                    <h3>HTML：</h3>
-                </div>
-                <div class="pro">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-                             aria-valuemin="0" aria-valuemax="100" style="width: 78%">
-                            <span class="sr-only">85% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="h">
-                    <h3>CSS：</h3>
-                </div>
-                <div class="pro">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-                             aria-valuemin="0" aria-valuemax="100" style="width: 76%">
-                            <span class="sr-only">85% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="h">
-                    <h3>NodeJs：</h3>
-                </div>
-                <div class="pro">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-                             aria-valuemin="0" aria-valuemax="100" style="width: 74%">
-                            <span class="sr-only">85% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="h">
-                    <h3>C#：</h3>
-                </div>
-                <div class="pro">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-                             aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                            <span class="sr-only">85% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="h">
-                    <h3>Java：</h3>
-                </div>
-                <div class="pro">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-                             aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                            <span class="sr-only">85% Complete</span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="h3">
+                <div class="h3" id="xm">
                     <h3><i class="fa fa-google-wallet"></i> Project. 参与的项目</h3>
                 </div>
 
                 <ul class="exp">
 
 
-                    <li>
+                    <li v-for="p in Project">
                         <div class="circle"></div>
-                        <h4>个人简历（2016 - Now）<a href="http://lukangkang.cc" class="label label-danger" target="_blank"><i
+                        <h4>{{p.name}}<a v-if="p.demo" href="{{p.demo}}" class="label label-danger" target="_blank"><i
                                 class="fa fa-link"></i> Demo</a></h4>
 
-                        <p class="p">
-                            一个好看的个人简历页面。主题色是蓝色，基于bootstrap开发，用到的插件有DialogEffects、fontawesome、lazyload、jquery。</p>
-
-                        <p class="p">设计原型为 <a href="http://html.love/" target="_blank">html.love</a>，在其设计基础上修改，只是参考了设计，没有拷贝代码。
+                        <p class="p" v-for="h in p.html">
+                            {{h}}
                         </p>
-                        <img class="load" src="" data-original="img/10.png">
-                    </li>
-
-                    <li>
-                        <div class="circle"></div>
-                        <h4>微名片，创业经纪人（2016 - Now）<a href="http://yue.vzhuke.com/chain/sale?s=1463983105771-50327"
-                                                    class="label label-danger" target="_blank"><i
-                                class="fa fa-link"></i> Demo</a></h4>
-
-                        <p class="p">参与项目中，开发为HTML5，后台程序为NodeJs，产品微名片，可进行后台录入编写，公司、销售、产品，进行线上预约拨打联系方式。</p>
-
-                        <p class="p">使用 NodeJs 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于个人独立完成的项目。</p>
-                        <img class="load" src="" data-original="img/1.png">
-                    </li>
-
-                    <li>
-                        <div class="circle"></div>
-                        <h4>慧数官网（2015 - 2016）<a href="http://huishu.com.cn/" class="label label-danger" target="_blank"><i
-                                class="fa fa-link"></i> Demo</a></h4>
-
-                        <p class="p">参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，慧数，专注于汽车服务。</p>
-
-                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
-                        <img class="load" src="" data-original="img/6.png">
-                    </li>
-
-                    <li>
-                        <div class="circle"></div>
-                        <h4>码英雄官网（2015 - 2016）<a href="http://h5.vzhuke.com/chunyan/index.html"
-                                                 class="label label-danger" target="_blank"><i class="fa fa-link"></i>
-                            Demo</a></h4>
-
-                        <p class="p">参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，码英雄，代码测试类网站。</p>
-
-                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
-                        <img class="load" src="" data-original="img/4.png">
-                    </li>
-                    <li>
-                        <div class="circle"></div>
-                        <h4>春言股权官网（2015 - 2016）<a href="http://h5.vzhuke.com/chunyan1/index.html"
-                                                  class="label label-danger" target="_blank"><i class="fa fa-link"></i>
-                            Demo</a></h4>
-
-                        <p class="p">参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，春言股权，公司注册 收转执照。</p>
-
-                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
-                        <img class="load" src="" data-original="img/5.png">
-                    </li>
-                    <li>
-                        <div class="circle"></div>
-                        <h4>注客科技官网（2015 - 2016）<a href="http://www.vzhuke.com" class="label label-danger"
-                                                  target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
-
-                        <p class="p">参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，注客科技，专注于服务中小企业的服务科技类网站。</p>
-
-                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
-                        <img class="load" src="" data-original="img/2.png">
-                    </li>
-
-
-                    <li>
-                        <div class="circle"></div>
-                        <h4>注客企业服务手机官网（2015 - 2016）<a href="http://wechat.vzhuke.com/Service/home/id/1.html"
-                                                      class="label label-danger" target="_blank"><i
-                                class="fa fa-link"></i> Demo</a></h4>
-
-                        <p class="p">参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于典型的门户网站，注客科技，专注于服务中小企业的服务科技类网站。</p>
-
-                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
-                        <img class="load" src="" data-original="img/3.png">
-                    </li>
-
-
-                    <li>
-                        <div class="circle"></div>
-                        <h4>财融天下官网（2015 - 2016）<a href="http://cairongtianxia.com/" class="label label-danger"
-                                                  target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
-
-                        <p class="p">
-                            参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于基金平台的网站，量化对冲，阳光私募，资管产品，新三板，信托产品，股票排行，财融天下，打造投资人最信赖的金融云平台。</p>
-
-                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
-                        <img class="load" src="" data-original="img/7.png">
-                    </li>
-
-
-                    <li>
-                        <div class="circle"></div>
-                        <h4>掌帮网官网（2015 - 2016）<a href="http://zhangbangwang.com/" class="label label-danger"
-                                                 target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
-
-                        <p class="p">参与项目中，开发为HTML，JavaScript，CSS，后台程序为PHP，属于外包网站，掌帮网，专注互联网策划开发与运营的科技企业。</p>
-
-                        <p class="p">使用 PHP 后台程序 和 Less 预处理器 来实现前端组件及数据交互，属于团队完成的项目。</p>
-                        <img class="load" src="" data-original="img/8.png">
-                    </li>
-
-                    <li>
-                        <div class="circle"></div>
-                        <h4>其他网站（2014 - 2015）</h4>
-
-                        <p class="p">2014到2015年做过2个网站，一个是P2P平台，一个是建筑信息分享平台，因为已经下线，所以没有Demo，抱歉，在此处记录一下</p>
-
-                        <p class="p">聚融财富（P2P），诚筑道（建筑信息平台）</p>
-                        <img class="load" src="">
+                        <img class="load" v-if="p.img" onclick="window.open('{{p.demo}}')" src="img/{{p.img}}">
                     </li>
 
                 </ul>
@@ -311,27 +144,16 @@
 
                 <ul class="exp">
 
-                    <li>
+                    <li v-for="p in Plugin">
                         <div class="circle"></div>
-                        <h4>Simple Switch（2015 - 2016）<a href="http://switch.lukangkang.cc/" class="label label-primary"
-                                                         target="_blank"><i class="fa fa-link"></i> Github源码</a> <a
-                                href="http://switch.lukangkang.cc/" class="label label-danger" target="_blank"><i
-                                class="fa fa-link"></i> Demo API</a></h4>
+                        <h4>{{p.name}}
+                            <a href="{{p.git}}" class="label label-primary" target="_blank"><i class="fa fa-link"></i> Github源码</a>
+                            <a v-if="p.demo" href="{{p.demo}}" class="label label-danger" target="_blank"><i class="fa fa-link"></i> Demo</a></h4>
 
-                        <p class="p">Simple Switch 一个简单而强大的开关插件。</p>
-
-                        <img class="load" src="" data-original="img/12.jpg">
-                    </li>
-                    <li>
-                        <div class="circle"></div>
-                        <h4>Vail.js（2015 - 2016）<a href="https://github.com/1029131145/vali" class="label label-primary"
-                                                   target="_blank"><i class="fa fa-link"></i> Github源码</a> <a
-                                href="http://1029131145.github.io/vali/" class="label label-danger" target="_blank"><i
-                                class="fa fa-link"></i> Demo API</a></h4>
-
-                        <p class="p">自己编写的基于jQuery的一款验证类插件，vail，包含22种验证，自定义验证，自定义提示和一个vail对象。</p>
-
-                        <img class="load" src="" data-original="img/9.png">
+                        <p class="p" v-for="h in p.html">
+                            {{h}}
+                        </p>
+                        <img class="load" v-if="p.img" onclick="window.open('{{p.demo}}')" src="img/{{p.img}}">
                     </li>
 
                 </ul>
@@ -340,7 +162,7 @@
         </div>
     </div>
 
-    <div class="container Modular fff">
+    <div class="container Modular fff"  id="rs">
         <div class="row">
             <div class="col-lg-12 c8 mo_right">
                 <div class="h3">
@@ -350,99 +172,13 @@
 
                 <div class="main">
                     <ul class="cbp_tmtimeline">
-                        <li>
-                            <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>10-15 入职</span> <span>2015</span>
+                        <li v-for="t in Time">
+                            <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>{{t.r}}</span> <span>{{t.y}}</span>
                             </time>
                             <div class="cbp_tmicon cbp_tmicon-earth"></div>
                             <div class="cbp_tmlabel">
-                                <h2>北京注客科技有限公司</h2>
-
-                                <p>
-                                    为响应国家“互联网+”;“大众创业、万众创新”;“普惠金融”的号召，积极推动科技创新，春言集团整合多年来积累的资产、项目、资本、资源等方面的优势，依托“注客”这一品牌，倾力打造中小企业创业者扶持B2C平台。汇聚创业者、投资人、创业服务机构、产业资源、金融资源等各类资源，形成完整的创业孵化生态系统。基于B2C模式、以互联网思维为创业企业提供全方位的创业服务，全力支持创业者改变世界、创造未来！
-                                    “注客”的含义：关注企业，倾注资源，资本注入
-                                    依托“注客”平台，从孵化扶持，到经营扶持及综合金融解决方案，再到“品牌通道+众筹策略+合伙人”的终极商业模式——让所有中小企业创业者都能在平台上成立、发展、交易直至成熟。公司联合第三方专业机构，为孵化企业提供全面优质的创业服务，为创业企业的快速成长提供全方位支撑。
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>02-01 入职</span> <span>2015</span>
-                            </time>
-                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
-                            <div class="cbp_tmlabel">
-                                <h2>北京淘伟科技有限公司</h2>
-
-                                <p>产品的核心业务为p2p网络系统开发与应用交易，该产品旨在帮助金融、理财、投资、p2p理财公司，
-                                    打造网络p2p平台，拓宽投资领域，使信贷平台拥有一个稳健、安全、诚信、透明的网络信贷平台。 一切经营
-                                    活动以客户为中心，从关心客户入手，调动公司的整体资源，来满足客户的多样化和个性化需求。开始大力发
-                                    展it服务和基于客户应用软件开发的业务。 淘伟科技，由一直服务于it前沿的精英创办，本着求实、创新、
-                                    与客户共同成长的谦虚态度服务于广大客户。我们的技术团队，对行业内各大p2p信贷网站有着深入的研究，人
-                                    人贷、拍拍贷、陆金所、e速贷、zopa、lending club等，除此之外我们还对百度、google搜索引擎有着长久
-                                    的专研，我们编写的代码更符合搜索引擎的搜索...</p>
-                            </div>
-                        </li>
-                        <li>
-                            <time class="cbp_tmtime" datetime="2013-04-13 05:36"><span>03-01 入职</span> <span>2014</span>
-                            </time>
-                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
-                            <div class="cbp_tmlabel">
-                                <h2>北京聚融财富管理有限公司</h2>
-
-                                <p>
-                                    “普惠金融，造福民生”是公司经营管理的核心理念。随着互联网和信息技术的推广，公司推出了P2P投资管理服务平台，服务两端客户，为百姓投资者开辟一个高效、稳健、透明、安全的投资渠道；另一方面，未来为5千万中小微实体企业，以及个人有效解决“借款，投资”的问题，立志打造最具有影响力的P2P借贷咨询服务平台，为推动民间金融资本高效发展流通贡献一份力量。</p>
-                            </div>
-                        </li>
-                        <li>
-                            <time class="cbp_tmtime" datetime="2013-04-15 13:15"><span>05-01 入学</span> <span>2012</span>
-                            </time>
-                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
-                            <div class="cbp_tmlabel">
-                                <h2>北大青鸟</h2>
-
-                                <p>北大青鸟APTECH成立于1999年，依托北京大学 优质雄厚的教育资源和背景，秉承“教育改变生活”的发展理念，一直致力于培养中国IT技能型紧缺人才。<br>
-                                    北大青鸟以完善的标准化管理为依托实现了体系的规模化发展，200余家授权培训中心遍布全国60多个重要城市，全国合作院校超过600所，同10000余家知名企业建立了战略合作伙伴关系，累计培养和输送80余万IT职业化人才进入IT行业，得到了社会各界认可。
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <time class="cbp_tmtime" datetime="2013-04-16 21:30"><span>05-01 入学</span> <span>2010</span>
-                            </time>
-                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
-                            <div class="cbp_tmlabel">
-                                <h2>湖北高等技术学院</h2>
-
-                                <p>
-                                    学校位于孝昌县老城区（花园新大桥东头，李家林115号），地理位置优越，交通便利，距离花园火车站不足1000米，距离县长途汽车站不足两公里，且有县3路公汽从学校门前经过。学校占地面积100余亩，建筑面积12000
-                                    m2，学校固定资产达2000余万元。
-                                    <br>
-                                    学校教学、生活设施布局合理，功能齐全，校园坏境优雅，文化气氛浓厚。学校有学生食堂，有男生、女生宿舍楼各一栋。学校具有机械钳工实训室、钢琴房、舞蹈房、画室及多个计算机房。
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <time class="cbp_tmtime" datetime="2013-04-17 12:11"><span>05-1 入学</span> <span>2008</span>
-                            </time>
-                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
-                            <div class="cbp_tmlabel">
-                                <h2>湖北省孝昌县小河镇中学</h2>
-
-                                <p>
-                                    小河镇位于孝昌县东北部，南接县城关花园镇，北与大悟县芳畈镇毗邻，东与小悟乡接壤，西与王店镇、卫店镇相连。地势东北高而西南低，大部分是丘陵。境内有澴河和沙窝河，金盆和芳畈两大水系及灌溉系统。2008年，有水库11座，当家塘堰1530口，泵站16座，过河大桥4座。耕层土壤主要有粘土、沙壤土，大部分为黄壤土。为针阔叶混交林。属亚热带地区，气候温和，日照充足，雨量充沛，四季分明，全年平均气温22℃。境内主要矿产资源有镁矿、磷矿、重晶石、石灰石、河砂石及丰富的碳酸钙富锶低钠天然饮用矿泉水资源。易发生雷电、洪水、霜冻、干旱等自然灾害。
-                                    <br>
-
-                                    <img class="load" width="480" height="286" src="" style="max-width: 100%"
-                                         data-original="img/11.jpg">
-                                </p>
-
-                            </div>
-                        </li>
-                        <li>
-                            <time class="cbp_tmtime" datetime="2013-04-18 09:56"><span>05-20 出生</span> <span>1996</span>
-                            </time>
-                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
-                            <div class="cbp_tmlabel">
-                                <h2>中国 - 北京</h2>
-
-                                <p>感谢我的父母把我带到这个美丽的世界上，o(^▽^)o。</p>
+                                <h2>{{t.t}}</h2>
+                                <p>{{t.c}}</p>
                             </div>
                         </li>
                     </ul>

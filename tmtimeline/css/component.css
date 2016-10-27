@@ -67,6 +67,12 @@
 	position: relative;
 	border-radius: 5px;
 }
+.cbp_tmtimeline > li .cbp_tmlabel > p{
+	font-size: 15px;
+}
+.cbp_tmtimeline > li .cbp_tmlabel > h2{
+	 font-size: 20px;
+}
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
 	background: #6cbfee;

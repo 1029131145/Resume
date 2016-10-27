@@ -1,5 +1,20 @@
 /*LuKang.less > Versions 2.0*/
 /***网页默认设置***/
+@import "../bootstrap/css/bootstrap.min.css";
+@import "buttons.css";
+@import "../fontawesome/css/font-awesome.min.css";
+@import "../tmtimeline/css/default.css";
+@import "../tmtimeline/css/component.css";
+@import "../DialogEffects/css/normalize.css";
+@import "../DialogEffects/css/demo.css";
+@import "../DialogEffects/css/dialog.css";
+@import "../DialogEffects/css/dialog-sandra.css";
+@font-face {
+  font-family: 'mi';
+  src: url('../fontawesome/fonts/mi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 /*字体颜色*/
 /*什么字体*/
 /*字体大小*/
@@ -12,15 +27,6 @@
 /*快速设置宽高度*/
 /*快速设置一个正方形*/
 /*快速设置浮动*/
-@import "../bootstrap/css/bootstrap.min.css";
-@import "buttons.css";
-@import "../fontawesome/css/font-awesome.min.css";
-@import "../tmtimeline/css/default.css";
-@import "../tmtimeline/css/component.css";
-@import "../DialogEffects/css/normalize.css";
-@import "../DialogEffects/css/demo.css";
-@import "../DialogEffects/css/dialog.css";
-@import "../DialogEffects/css/dialog-sandra.css";
 .fixed {
   position: fixed;
 }
@@ -69,7 +75,7 @@ border-box，border和padding计算入width之内，其实就是怪异模式了~
 * {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+  font-family: mi, "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -292,7 +298,7 @@ a {
   padding-top: 4px;
 }
 .exp li .p {
-  font-size: 17px;
+  font-size: 14px;
   color: #616161;
   text-indent: 1em;
 }
@@ -311,6 +317,27 @@ img.load {
   background-image: url("../img/loading.png");
   background-repeat: no-repeat;
   background-position: center center;
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #eee;
+  cursor: pointer;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+}
+img.load:hover {
+  box-shadow: 0px 0px 10px #eeeeee;
+  -moz-box-shadow: 0px 0px 10px #eeeeee;
+  -webkit-box-shadow: 0px 0px 10px #eeeeee;
 }
 #bgc {
   position: fixed;
