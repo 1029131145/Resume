@@ -48,7 +48,7 @@ function weixin() {
 
 $(function () {
     setTimeout(function () {
-        //console.clear();
+        console.clear();
 
         console.log('我是一个充满活力\n对前端由衷热爱\n善于发现问题的前端工程师\n我目前正在寻找前端工程师岗位\n希望借此机会为贵司献上我的一点绵薄之力\n快招我到碗里来吧。')
 
